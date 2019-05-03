@@ -8,7 +8,7 @@ import os
 app = Flask(__name__, static_url_path='/static')
 app.config['SECRET_KEY'] = 'c56bec1880b567d61b7cdd462cc2070a'
 socketio=SocketIO(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = ['DATABASE_URL']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
