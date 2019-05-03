@@ -180,10 +180,11 @@ def reset_cards():
     return redirect(url_for('gameplay_page'))
 
 def add_dealer():
-    user = User(id=1, first_name="Dealer", last_name="b", email="b", username="b", password="b", funds=1000)
-    dealer = Player(pid=user.id, amnt=user.funds, bet=5, id=user.id, ptid=1)
+    user = User(first_name="Dealer", last_name="b", email="b", username="b", password="b", funds=1000)
     db.session.add(user)
     db.session.commit()
+    userDealer = User.query.filter_by(id=1).first()
+    dealer = Player(pid=userDealer.id, amnt=userDealer.funds, bet=5, id=userDealer.id, ptid=1)
     db.session.add(dealer)
     db.session.commit()
 
