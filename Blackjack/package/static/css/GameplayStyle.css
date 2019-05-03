@@ -1,0 +1,175 @@
+body {
+    background-color: brown;
+}
+nav {
+    margin-left: -1%;
+    margin-right: -1%;
+    margin-top: -1.11%;
+    background-color: white;
+    color: gold;
+    height: 25%;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a:link {
+    font-size: 100%;
+    color: red;
+    text-decoration: none;
+}
+nav ul li a:visited {
+    font-size: 100%;
+    color: red;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    font-size: 100%;
+    color: black;
+    text-decoration: none;
+}
+.table {
+    padding-top: 1%;
+    margin-left: 36.5%;
+    width: 25%;display: table;
+    /*margin-bottom: -1%;*/
+}
+.row {
+    display: table-row;
+}
+.gameplay_link {
+    display: table-cell;
+}
+.create_account_link {
+    display: table-cell;
+}
+.login_link {
+    display: table-cell;
+}
+#title {
+    color: white;
+}
+#legend {
+    color: white;
+    font-size: 150%;
+    margin-left: 40%;
+}
+.form_errors {
+    color: red;
+    margin-left: 25%;
+}
+#form_label {
+    color: white;
+    font-size: 150%;
+    margin-left: 44%;
+}
+
+input[type=text] {
+    margin-left: 39%;
+    background-color: black;
+    color: white;
+    font-size: 150%;
+    border: solid white;
+}
+input[type=password] {
+    margin-left: 39%;
+    background-color: black;
+    color: white;
+    font-size: 150%;
+    border: solid white;
+}
+input[type=submit] {
+    margin-left: 48%;
+    font-size: 100%;
+}
+
+.players {
+    display: inline-block;
+    width: 100%;
+    margin-right: 10px;
+
+}
+
+.dealer {
+    display: inline-block;
+    margin-bottom: 100px;
+}
+
+/* EXPERIMENTING WITH DISPLAYING GAME CARDS */
+.card {
+    position: relative;
+    margin-left: 30%;
+
+    width: 150px;
+    height: 220px;
+    /*width: 15%;*/
+    /*height: 55%;*/
+    border-radius: 5%;
+    background: #fff;
+    -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+.card p {
+    padding-top: 35%;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Serif;
+    font-size: 500%;
+    /*font: 100px/220px Georgia, "Times New Roman", Serif;*/
+}
+.suitdiamonds:before, .suitdiamonds:after {
+    display: table-cell;
+    content: "♦";
+    color: red;
+}
+.suithearts:before, .suithearts:after {
+    display: table-cell;
+    content: "♥";
+    color: red;
+}
+.suitspades:before, .suitspades:after {
+    display: table-cell;
+    content: "♠";
+    color: black;
+}
+.suitclubs:before, .suitclubs:after {
+    display: table-cell;
+    content: "♣";
+    color: black;
+}
+
+div[class*='suit']:before {
+    position: absolute;
+    font-size: 35px;
+    left: 5px;
+    top: 5px;
+}
+div[class*='suit']:after {
+    bottom: 5px;
+    position: absolute;
+    right: 5px;
+    font-size: 35px;
+}
+
+
+.deck_hand:before, .deck_hand:after {
+    content: "";
+    display: table;
+}
+.deck_hand:after {
+    clear: both;
+}
+
+.table_card {
+    display: table;
+    width: 50%;
+}
+.row_card1 {
+    display: table-row;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}

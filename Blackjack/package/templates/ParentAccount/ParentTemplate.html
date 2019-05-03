@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parent</title>
+    <link rel="" type="text/javascript" href="../../static/Javascript/Card.js">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% block stylesheet %}{% endblock %}
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <nav>
+        <ul>
+            <div class="table">
+                <div class="row">
+                    <div class="gameplay_link">
+                        <li><a href="{{ url_for('gameplay_page') }}">Gameplay</a> </li>
+                    </div>
+                    <div class="create_account_link">
+                        <li><a href="{{ url_for('profile_page') }}">Profile</a> </li>
+                    </div>
+                    <div class="login_link">
+                        <li><a href="{{ url_for('logout') }}">Logout</a> </li>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    {% block gameplay %}{% endblock %}
+    {% block profile_page %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,78 @@
+{% extends "ParentAccount/ParentTemplate.html" %}
+{% block stylesheet %}
+    <link href="../../static/css/GameplayStyle.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block gameplay %}
+    <h1 style="color: red">Welcome to table 1</h1>
+    <h3 id="tablefunds">You are player: {{ player.playerNum }} you have {{ player.amnt }}</h3>
+    <h3 id="currentbet">Current bet:</h3>
+    <form action="/leave" method="post">
+        <input id="leave" type="submit" value="Leave">
+    </form>
+    <script src="../../static/Javascript/Gameplay.js" rel="script" type="text/javascript"></script>
+    <script src="../../static/Javascript/Card.js" rel="script" type="text/javascript"></script>
+    <script src="../../static/Javascript/Gameplay.js" rel="script" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+
+
+    <script>
+        passPlayerNum({{ player.playerNum }});
+        passPlayerAmnt({{ player.amnt }})
+    </script>
+    <div id="table_parent">
+        <div style="width: 100%" class="dealer" id="table_one_deal">
+
+            <div id="table_one_dealer">
+                 <h1 id="playernull">Dealer:</h1>
+                 <table id="playernullTable">
+
+                 </table>
+            </div>
+        </div>
+        <div id="{{ player.playerNum }}">
+            <input type="number" name="numBet" id="numBet">
+            <button id="bet" onclick="bet()">Bet</button>
+            <button id="stay" onclick="stay()" disabled>Stay</button>
+            <button id="hit" onclick="hit()" disabled>Hit</button>
+            <button id="split" onclick="split(false)" disabled>Split</button>
+            <button id="double_down" onclick="doubleDown()" disabled>Double Down</button>
+        </div>
+
+        <div class="players" id="table_one_players" >
+            <div id="seat1" class="column">
+                <h3 id="player1">player 1</h3>
+                <table id="player1Table">
+                </table>
+            </div>
+            <div id="seat2" class="column">
+                <h3 id="player2">player 2</h3>
+                <table id="player2Table">
+                </table>
+            </div>
+            <div id="seat3" class="column">
+                <h3 id="player3">player 3</h3>
+                <table id="player3Table">
+                </table>
+            </div>
+            <div id="seat4" class="column">
+                <h3 id="player4">player 4</h3>
+                <table id="player4Table">
+                </table>
+            </div>
+            <div id="seat5" class="column">
+                <h3 id="player5">player 5</h3>
+                <table id="player5Table">
+                </table>
+            </div>
+            <div id="seat6" class="column">
+                <h3 id="player6">player 6</h3>
+                <table id="player6Table">
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

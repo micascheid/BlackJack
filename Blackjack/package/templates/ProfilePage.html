@@ -1,0 +1,61 @@
+{% extends "ParentAccount/ParentTemplate.html" %}
+{% block stylesheet %}
+    <link href="../static/css/GameplayStyle.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block profile_page %}
+    <h1 align="center" id="title">{{ current_user.username }}'s Profile Page</h1>
+    <h3 align="center" id="title">Welcome to your Profile Page.  Here you can edit account information as well
+        as add funds to your account!
+    </h3>
+    <h3 align="center" id="title">{{ current_user.first_name }}</h3>
+    <h3 align="center" id="title">{{ current_user.last_name }}</h3>
+    <h3 align="center" id="title">{{ current_user.email }}</h3>
+    <h3 align="center" id="title">{{ current_user.username }}</h3>
+    <h3 align="center" id="title">{{ current_user.funds }}</h3>
+    <br><br><br>
+    <form class="form" action="" name="EditAccount" method="post">
+        <legend id="legend">Update Account Information</legend><br>
+        {{ form.hidden_tag() }}
+        {{ delete_form.hidden_tag() }}
+{#      Add Funds Field#}
+        <label id="form_label">{{ form.add_funds.label }}</label><br>
+        {% if form.add_funds.errors %}
+            <div class="form_errors">
+                {% for error in form.add_funds.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.add_funds }}<br><br><br>
+        {% endif %}
+{#      Username Field#}
+        <label id="form_label">{{ form.username.label }}</label><br>
+        {% if form.username.errors %}
+            {% for error in form.username.errors %}
+                {{ error }}
+            {% endfor %}
+        {% else %}
+            {{ form.username }}<br><br><br>
+        {% endif %}
+{#      Email Field#}
+        <label id="form_label">{{ form.email.label }}</label><br>
+        {% if form.email.errors %}
+            {% for error in form.email.errors %}
+                {{ error }}
+            {% endfor %}
+        {% else %}
+            {{ form.email }}<br><br><br>
+        {% endif %}
+{#      Password Field#}
+        <label id="form_label">{{ form.password.label }}</label><br>
+        {% if form.password.errors %}
+            {% for error in form.password.errors %}
+                {{ error }}
+            {% endfor %}
+        {% else %}
+            {{ form.password }}<br><br><br>
+        {% endif %}
+{#      Submit Field#}
+        {{ form.submit }}
+    </form>
+{% endblock %}

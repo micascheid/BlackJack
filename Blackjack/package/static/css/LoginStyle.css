@@ -1,0 +1,88 @@
+body {
+    background-color: black;
+}
+nav {
+    margin-left: -1%;
+    margin-right: -1%;
+    margin-top: -1.11%;
+    background-color: white;
+    color: gold;
+    height: 25%;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a:link {
+    font-size: 100%;
+    color: red;
+    text-decoration: none;
+}
+nav ul li a:visited {
+    font-size: 100%;
+    color: red;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    font-size: 100%;
+    color: black;
+    text-decoration: none;
+}
+.table {
+    padding-top: 1%;
+    margin-left: 38%;
+    width: 25%;display: table;
+    /*margin-bottom: -1%;*/
+}
+.row {
+    display: table-row;
+}
+.create_account_link {
+    display: table-cell;
+}
+.login_link {
+    display: table-cell;
+}
+#title {
+    color: white;
+}
+.div_form {
+    margin-left: 18%;
+}
+#form_label {
+    color: white;
+    font-size: 150%;
+    margin-left: 39%;
+}
+#legend {
+    color: white;
+    font-size: 150%;
+    margin-left: 48%;
+}
+.form_errors {
+    color: red;
+    margin-left: 25%;
+}
+input[type=text] {
+    margin-left: 39%;
+    background-color: black;
+    color: white;
+    font-size: 150%;
+    border: solid white;
+}
+input[type=password] {
+    margin-left: 39%;
+    background-color: black;
+    color: white;
+    font-size: 150%;
+    border: solid white;
+}
+input[type=submit] {
+    margin-left: 48%;
+    font-size: 100%;
+}
+.email {
+    margin-left: 35%;
+}

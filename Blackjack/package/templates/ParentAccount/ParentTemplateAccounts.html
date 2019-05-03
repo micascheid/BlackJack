@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parent Accounts</title>
+    {% block stylesheet %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <ul>
+            <div class="table">
+                <div class="row">
+                    <div class="create_account_link">
+                        <li><a href="{{ url_for('create_account') }}">Create Account</a> </li>
+                    </div>
+                    <div class="login_link">
+                        <li><a href="{{ url_for('login') }}">Login</a> </li>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    {% block create_account %}{% endblock %}
+    {% block login_account %}{% endblock %}
+</body>
+</html>
