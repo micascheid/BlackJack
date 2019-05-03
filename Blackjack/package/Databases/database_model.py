@@ -50,7 +50,7 @@ class Table(db.Model):
     tdeck   = db.relationship("Deck", backref='table')
 
     def __repr__(self):
-        return  "tid:" + self.tid + "\tseat: " + self.seat  + "\ttablestate: " + self.tablestate
+        return  "tid:" + str(self.tid) + "\tseat: " + str(self.seat)  + "\ttablestate: " + self.tablestate
 
 class Deck(db.Model):
     __tablename__ = 'deck'
