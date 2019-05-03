@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, flash, get_flashed_messages
-from Blackjack.package import app, bcrypt, db
-from Blackjack.package.Databases.database_model import User
-from Blackjack.package.Forms.AccountForms import CreateAccountFlaskForm, LoginFlaskForm, UpdateAccountFlaskForm, DeleteAccountFlaskForm
+from package import app, bcrypt, db
+from package.Databases.database_model import User
+from package.Forms.AccountForms import CreateAccountFlaskForm, LoginFlaskForm, UpdateAccountFlaskForm, DeleteAccountFlaskForm
 from flask_login import current_user, login_user, logout_user, login_required
 
 @app.route('/create_account', methods=['GET', 'POST'])

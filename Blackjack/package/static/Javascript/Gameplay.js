@@ -56,7 +56,7 @@ function stay(){
             betButton.disabled = true;
             splitButton.disabled = true;
             doubleButton.disabled = true;
-            if (result.over ==="true") {
+            if (result.over === "true") {
                 playerTurn(playerNum);
             }else {
                 console.log("next hand");
