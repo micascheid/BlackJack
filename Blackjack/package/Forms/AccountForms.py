@@ -1,4 +1,4 @@
-from package.Databases.database_model import User
+from Blackjack.package.Databases.database_model import User
 from flask_login import current_user
 from flask_wtf import FlaskForm
 from wtforms import SubmitField, StringField, PasswordField, BooleanField, TextAreaField, IntegerField
