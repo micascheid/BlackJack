@@ -50,7 +50,7 @@ class Table(db.Model):
     tdeck   = db.relationship("Deck", backref='table')
 
     def __repr__(self):
-        return  self.tid + "\tseat: " + self.seat  + "\ttablestate: " + self.tablestate
+        return  str(self.tid) + "\tseat: " + str(self.seat)  + "\ttablestate: " + self.tablestate
 
 class Deck(db.Model):
     __tablename__ = 'deck'
@@ -70,4 +70,4 @@ class Deck(db.Model):
         #        + self.pid + "tid: " + self.tid
 
 
-#nginx will load all files in /usr/local/etc/nginx/servers/
+
