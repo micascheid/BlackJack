@@ -1,4 +1,4 @@
-from Blackjack.package import db, login_manager
+from package import db, login_manager
 from flask_login import UserMixin
 
 @login_manager.user_loader
@@ -50,7 +50,7 @@ class Table(db.Model):
     tdeck   = db.relationship("Deck", backref='table')
 
     def __repr__(self):
-        return  "tid:" + str(self.tid) + "\tseat: " + str(self.seat)  + "\ttablestate: " + self.tablestate
+        return  self.tid + "\tseat: " + self.seat  + "\ttablestate: " + self.tablestate
 
 class Deck(db.Model):
     __tablename__ = 'deck'
