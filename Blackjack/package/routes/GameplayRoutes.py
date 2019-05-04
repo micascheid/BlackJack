@@ -98,7 +98,7 @@ def deck_build():
                     db.session.commit()
 
     add_dealer()
-    return render_template('Gameplay.html')
+    return redirect('create_account')
 
 def table_four():
     return render_template("BlackjackTables/Table4.html")
@@ -345,7 +345,6 @@ def cardTotal(pid, lid):
         total += cardTran(card.cnum)
     return total
 
-
 def bust(total, res):
     if total > 21:
         res = "You Lost"
@@ -398,3 +397,35 @@ def playerFeild(table, player):
 @app.errorhandler(404)
 def pageNotfound(e):
     return render_template('404.html'), 404
+
+@app.route('/database_wipe', methods=['GET', 'POST'])
+def databaseWipe():
+    #Please note this needs to take place in Deck, Player, Table, User
+    #Then run deck build afterwards
+
+    db.session.query(Deck).delete()
+    db.session.query(Player).delete()
+    db.session.query(Table).delete()
+    db.session.query(User).delete()
+    db.session.commit()
+
+    return redirect('deck_build')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
