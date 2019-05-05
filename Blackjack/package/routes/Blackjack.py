@@ -5,6 +5,7 @@ from flask_login import current_user
 from Blackjack.package.Databases import database_model as dm
 from Blackjack.package.Databases.database_model import User, Deck, Player, Table
 from Blackjack.package.routes.Results import HitResult, SplitResult, RoundResult
+import time
 
 class DoubleDown:
     def __init__(self, bet, funds):
@@ -303,43 +304,55 @@ def PlayerDealerCompare(i, player, dealerScoreTotal):
     handNum = "hand" + str(i)
     user = current_user
 
-    if playerScoreTotal > dealerScoreTotal and playerScoreTotal <= 21 or (playerScoreTotal < dealerScoreTotal and dealerScoreTotal > 21 and playerScoreTotal < 21):
+    if playerScoreTotal > dealerScoreTotal and playerScoreTotal <= 21:
         # JSON variables to pass
-        win = "Win"
         winnings = player.bet
         tableValue = player.amnt + winnings
-        # Database manipulation
+
         player.amnt = tableValue
         player.bet = 0
+        db.session.commit()
         user.funds = player.amnt
         db.session.commit()
-        # JSON object
-        #finalResult = jsonify(RoundResult(win, str(winnings), str(tableValue)).dictify())
         finalResult = {handNum:[{"WLT":"win","player":player.playerNum,"playerAmnt":player.amnt,"playerNum":player.playerNum}]}
 
-    if playerScoreTotal == dealerScoreTotal:
+    if playerScoreTotal < dealerScoreTotal and dealerScoreTotal > 21 and playerScoreTotal < 21:
         # JSON variables to pass
-        win = "Tie"
-        winnings = 0
+        winnings = player.bet
+        tableValue = player.amnt + winnings
+
+        player.amnt = tableValue
+        player.bet = 0
+        db.session.commit()
+        user.funds = player.amnt
+        db.session.commit()
+        userCheckFund = current_user.funds
+        print("AMNT:", userCheckFund)
+        finalResult = {handNum: [{"WLT": "win", "player": player.playerNum, "playerAmnt": player.amnt, "playerNum": player.playerNum}]}
+
+    if playerScoreTotal == dealerScoreTotal:
         tableValue = player.amnt
         # Database manipulation
         player.amnt = tableValue
         player.bet = 0
+        db.session.commit()
         user.funds = player.amnt
         db.session.commit()
-        # JSON object
+
         finalResult = {handNum:[{"WLT":"Tie","player":player.playerNum,"playerAmnt":player.amnt,"playerNum":player.playerNum}]}
 
     if playerScoreTotal < dealerScoreTotal and dealerScoreTotal<=21 or playerScoreTotal > 21:
         # JSON variables to pass
-        win = "Loser HAHA!"
         winnings = -1 * player.bet
         tableValue = player.amnt + winnings
-        # Database manipulation
+
         player.amnt = tableValue
+        db.session.commit()
         player.bet = 0
+        db.session.commit()
         user.funds = player.amnt
         db.session.commit()
+
         # JSON object
         finalResult = {handNum:[{"WLT":"Loss","player":player.playerNum,"playerAmnt":player.amnt,"playerNum":player.playerNum}]}
 

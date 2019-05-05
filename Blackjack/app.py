@@ -1,4 +1,4 @@
-from Blackjack.package import app
+from Blackjack.Blackjack.package import app
 
 if __name__ == '__main__':
     app.run(debug=True)

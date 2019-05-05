@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="358ab214-460e-45bd-8b27-9c384cce6006" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack/GunicornConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/GunicornConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack/package/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack/package/Databases/database_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/Databases/database_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack/package/Forms/AccountForms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/Forms/AccountForms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack/package/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack/package/routes/AccountRoutes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/routes/AccountRoutes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blackjack/package/routes/Blackjack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/routes/Blackjack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack/package/static/Javascript/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/static/Javascript/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blackjack/package/static/Javascript/Gameplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/static/Javascript/Gameplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack/package/routes/GameplayRoutes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack/package/routes/GameplayRoutes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,330 +17,100 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.41693392">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/GameplayRoutes.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="652">
-                  <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
-                  <folding>
-                    <element signature="e#652#691#0" />
-                    <element signature="e#788#930#0" />
-                    <element signature="e#1020#1995#0" />
-                    <element signature="e#1403#1775#0" />
-                    <element signature="e#1794#1949#0" />
-                    <element signature="e#2019#2069#0" />
-                    <element signature="e#2091#2197#0" />
-                    <element signature="e#2277#2382#0" />
-                    <element signature="e#2424#3327#0" />
-                    <element signature="e#2464#3327#0" />
-                    <element signature="e#2508#3327#0" />
-                    <element signature="e#2580#2733#0" />
-                    <element signature="e#2790#2942#0" />
-                    <element signature="e#2998#3151#0" />
-                    <element signature="e#3208#3327#0" />
-                    <element signature="e#3413#3466#0" />
-                    <element signature="e#3490#4419#0" />
-                    <element signature="e#3665#4324#0" />
-                    <element signature="e#3770#4324#0" />
-                    <element signature="e#3843#4089#0" />
-                    <element signature="e#3885#3940#0" />
-                    <element signature="e#4453#4760#0" />
-                    <element signature="e#4558#4608#0" />
-                    <element signature="e#4655#4742#0" />
-                    <element signature="e#4795#6406#0" />
-                    <element signature="e#5062#5324#0" />
-                    <element signature="e#5364#5627#0" />
-                    <element signature="e#5667#6385#0" />
-                    <element signature="e#5722#6346#0" />
-                    <element signature="e#5838#6346#0" />
-                    <element signature="e#5919#6175#0" />
-                    <element signature="e#6451#6744#0" />
-                    <element signature="e#6463#6723#0" />
-                    <element signature="e#6805#7530#0" />
-                    <element signature="e#6914#7070#0" />
-                    <element signature="e#7106#7336#0" />
-                    <element signature="e#7355#7530#0" />
-                    <element signature="e#7583#7913#0" />
-                    <element signature="e#7709#7790#0" />
-                    <element signature="e#7809#7913#0" />
-                    <element signature="e#7974#8314#0" />
-                    <element signature="e#8103#8184#0" />
-                    <element signature="e#8203#8314#0" />
-                    <element signature="e#8345#8993#0" />
-                    <element signature="e#8535#8898#0" />
-                    <element signature="e#8639#8898#0" />
-                    <element signature="e#9059#9485#0" />
-                    <element signature="e#9539#10003#0" />
-                    <element signature="e#9749#9888#0" />
-                    <element signature="e#10053#10858#0" />
-                    <element signature="e#10351#10465#0" />
-                    <element signature="e#10889#11119#0" />
-                    <element signature="e#11148#11250#0" />
-                    <element signature="e#11332#11868#0" />
-                    <element signature="e#11598#11729#0" />
-                    <element signature="e#11635#11729#0" />
-                    <element signature="e#11677#11729#0" />
-                    <element signature="e#12037#12374#0" />
-                    <element signature="e#12424#12463#0" />
-                    <element signature="e#12492#12619#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Blackjack/package/static/Javascript/Card.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-                  <folding>
-                    <element signature="n#!!block;n#cardSocket#0" />
-                    <element signature="n#!!block;n#cardSocketRand#0" />
-                    <element signature="e#295#3700#0" />
-                    <element signature="e#628#781#0" />
-                    <element signature="e#995#1053#0" />
-                    <element signature="e#1103#1375#0" />
-                    <element signature="e#1187#1369#0" />
-                    <element signature="e#1396#1668#0" />
-                    <element signature="e#1480#1662#0" />
-                    <element signature="e#1672#1861#0" />
-                    <element signature="e#2026#2058#0" />
-                    <element signature="e#2082#3042#0" />
-                    <element signature="e#2111#2354#0" />
-                    <element signature="e#2148#2217#0" />
-                    <element signature="e#2223#2305#0" />
-                    <element signature="e#2382#2714#0" />
-                    <element signature="e#2587#2704#0" />
-                    <element signature="e#2742#3036#0" />
-                    <element signature="e#2910#3026#0" />
-                    <element signature="e#3067#3698#0" />
-                    <element signature="e#3096#3171#0" />
-                    <element signature="e#3199#3427#0" />
-                    <element signature="e#3321#3417#0" />
-                    <element signature="e#3455#3692#0" />
-                    <element signature="e#3544#3682#0" />
-                    <element signature="n#!!block;n#playerTurn#0" />
-                    <element signature="e#3828#4698#0" />
-                    <element signature="e#4212#4363#0" />
-                    <element signature="e#4409#4669#0" />
-                    <element signature="n#!!block;n#dealerAISocket#0" />
-                    <element signature="e#4815#5847#0" />
-                    <element signature="e#5072#5792#0" />
-                    <element signature="e#5186#5399#0" />
-                    <element signature="e#5513#5575#0" />
-                    <element signature="e#5623#5690#0" />
-                    <element signature="e#5696#5786#0" />
-                    <element signature="n#!!block;n#passPlayerNum#0" />
-                    <element signature="n#!!block;n#passPlayerAmnt#0" />
-                    <element signature="n#!!block;n#getCard#0" />
-                    <element signature="e#6103#6516#0" />
-                    <element signature="e#6162#6510#0" />
-                    <element signature="e#6314#6499#0" />
-                    <element signature="e#6417#6483#0" />
-                    <element signature="n#!!block;n#cardTranslation#0" />
-                    <element signature="n#!!block;n#suitTrans#0" />
-                    <element signature="n#!!block;n#ready#0" />
-                    <element signature="e#7833#8184#0" />
-                    <element signature="e#8104#8174#0" />
-                    <element signature="e#8275#8528#0" />
-                    <element signature="e#8338#8518#0" />
-                    <element signature="e#8457#8504#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Blackjack/GunicornConfig.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Blackjack/package/static/Javascript/Gameplay.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="193">
-                  <caret line="147" column="1" lean-forward="true" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
-                  <folding>
-                    <element signature="n#!!block;n#deal#0" />
-                    <element signature="e#140#1140#0" />
-                    <element signature="e#200#1134#0" />
-                    <element signature="e#442#782#0" />
-                    <element signature="e#537#768#0" />
-                    <element signature="e#600#715#0" />
-                    <element signature="e#815#1062#0" />
-                    <element signature="e#910#1048#0" />
-                    <element signature="n#!!block;n#stay#0" />
-                    <element signature="e#1649#2317#0" />
-                    <element signature="e#1707#2311#0" />
-                    <element signature="e#2096#2150#0" />
-                    <element signature="e#2155#2301#0" />
-                    <element signature="n#!!block;n#hit#0" />
-                    <element signature="e#2681#2910#0" />
-                    <element signature="e#2741#2904#0" />
-                    <element signature="n#!!block;n#split#0" />
-                    <element signature="e#3049#3654#0" />
-                    <element signature="e#3109#3648#0" />
-                    <element signature="e#3264#3548#0" />
-                    <element signature="e#3581#3638#0" />
-                    <element signature="n#!!block;n#splitCheck#0" />
-                    <element signature="e#3957#4176#0" />
-                    <element signature="e#4040#4101#0" />
-                    <element signature="e#4107#4166#0" />
-                    <element signature="n#!!block;n#doubleDownCheck#0" />
-                    <element signature="e#4450#4744#0" />
-                    <element signature="e#4509#4738#0" />
-                    <element signature="e#4591#4657#0" />
-                    <element signature="e#4663#4728#0" />
-                    <element signature="n#!!block;n#dealerBlackJackCheck#0" />
-                    <element signature="n#!!block;n#bet#0" />
-                    <element signature="e#5610#5965#0" />
-                    <element signature="e#5969#6010#0" />
-                    <element signature="n#!!block;n#checkFundsBet#0" />
-                    <element signature="e#6328#7006#0" />
-                    <element signature="e#6396#7000#0" />
-                    <element signature="e#6639#6989#0" />
-                    <element signature="n#!!block;n#doubleDown#0" />
-                    <element signature="e#7201#7588#0" />
-                    <element signature="e#7260#7582#0" />
-                    <element signature="n#!!block;n#evalSocket#0" />
-                    <element signature="e#7771#9156#0" />
-                    <element signature="e#7941#8702#0" />
-                    <element signature="e#8448#8625#0" />
-                    <element signature="e#8707#9110#0" />
-                    <element signature="n#!!block;n#dealerTotalFunc#0" />
-                    <element signature="n#!!block;n#roundOverButtons#0" />
-                    <element signature="e#9478#9596#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/Blackjack.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="191">
-                  <caret line="134" column="63" selection-start-line="134" selection-start-column="63" selection-end-line="134" selection-end-column="63" />
-                  <folding>
-                    <element signature="e#412#571#0" />
-                    <element signature="e#452#493#0" />
-                    <element signature="e#526#571#0" />
-                    <element signature="e#589#704#0" />
-                    <element signature="e#624#642#0" />
-                    <element signature="e#676#704#0" />
-                    <element signature="e#732#834#0" />
-                    <element signature="e#915#1670#0" />
-                    <element signature="e#1122#1234#0" />
-                    <element signature="e#1159#1234#0" />
-                    <element signature="e#1242#1286#0" />
-                    <element signature="e#1487#1629#0" />
-                    <element signature="e#1546#1588#0" />
-                    <element signature="e#1749#2279#0" />
-                    <element signature="e#1895#1916#0" />
-                    <element signature="e#2067#2127#0" />
-                    <element signature="e#2146#2279#0" />
-                    <element signature="e#2356#2749#0" />
-                    <element signature="e#2850#3517#0" />
-                    <element signature="e#3146#3256#0" />
-                    <element signature="e#4257#4579#0" />
-                    <element signature="e#4679#5056#0" />
-                    <element signature="e#5167#5375#0" />
-                    <element signature="e#5401#5615#0" />
-                    <element signature="e#5457#5569#0" />
-                    <element signature="e#5494#5569#0" />
-                    <element signature="e#5639#5984#0" />
-                    <element signature="e#6010#6123#0" />
-                    <element signature="e#6148#6198#0" />
-                    <element signature="e#6221#6327#0" />
-                    <element signature="e#6405#6982#0" />
-                    <element signature="e#6609#6937#0" />
-                    <element signature="e#7076#7259#0" />
-                    <element signature="e#7353#8139#0" />
-                    <element signature="e#7756#8076#0" />
-                    <element signature="e#8171#8401#0" />
-                    <element signature="e#8463#10253#0" />
-                    <element signature="e#8734#9242#0" />
-                    <element signature="e#9010#9023#0" />
-                    <element signature="e#9297#9694#0" />
-                    <element signature="e#9798#10229#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Blackjack/package/static/Javascript/Gameplay.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="498">
-                  <caret line="284" column="14" selection-start-line="284" selection-start-column="14" selection-end-line="284" selection-end-column="14" />
-                  <folding>
-                    <element signature="n#!!block;n#deal#0" />
-                    <element signature="e#140#1140#0" />
-                    <element signature="e#200#1134#0" />
-                    <element signature="e#442#782#0" />
-                    <element signature="e#537#768#0" />
-                    <element signature="e#600#715#0" />
-                    <element signature="e#815#1062#0" />
-                    <element signature="e#910#1048#0" />
-                    <element signature="n#!!block;n#stay#0" />
-                    <element signature="e#1649#2318#0" />
-                    <element signature="e#1707#2312#0" />
-                    <element signature="e#2097#2151#0" />
-                    <element signature="e#2156#2302#0" />
-                    <element signature="n#!!block;n#hit#0" />
-                    <element signature="e#2682#2911#0" />
-                    <element signature="e#2742#2905#0" />
-                    <element signature="n#!!block;n#split#0" />
-                    <element signature="e#3050#3655#0" />
-                    <element signature="e#3110#3649#0" />
-                    <element signature="e#3265#3549#0" />
-                    <element signature="e#3582#3639#0" />
-                    <element signature="n#!!block;n#splitCheck#0" />
-                    <element signature="e#3899#4183#0" />
-                    <element signature="e#3958#4177#0" />
-                    <element signature="e#4041#4102#0" />
-                    <element signature="e#4108#4167#0" />
-                    <element signature="n#!!block;n#doubleDownCheck#0" />
-                    <element signature="e#4451#4745#0" />
-                    <element signature="e#4510#4739#0" />
-                    <element signature="e#4592#4658#0" />
-                    <element signature="e#4664#4729#0" />
-                    <element signature="n#!!block;n#dealerBlackJackCheck#0" />
-                    <element signature="e#4931#4947#0" />
-                    <element signature="e#4991#5019#0" />
-                    <element signature="e#5134#5170#0" />
-                    <element signature="n#!!block;n#bet#0" />
-                    <element signature="e#5611#5966#0" />
-                    <element signature="e#5970#6011#0" />
-                    <element signature="n#!!block;n#checkFundsBet#0" />
-                    <element signature="e#6329#7007#0" />
-                    <element signature="e#6397#7001#0" />
-                    <element signature="e#6640#6990#0" />
-                    <element signature="n#!!block;n#doubleDown#0" />
-                    <element signature="e#7202#7589#0" />
-                    <element signature="e#7261#7583#0" />
-                    <element signature="n#!!block;n#evalSocket#0" />
-                    <element signature="n#!!block;n#dealerTotalFunc#0" />
-                    <element signature="n#!!block;n#roundOverButtons#0" />
-                    <element signature="e#9479#9597#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/GameplayRoutes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/Results.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blackjack/package/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blackjack/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Blackjack/package/Databases/database_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blackjack/package/Forms/AccountForms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/AccountRoutes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/Blackjack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1654">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <folding>
+                <element signature="e#412#571#0" />
+                <element signature="e#452#493#0" />
+                <element signature="e#526#571#0" />
+                <element signature="e#589#704#0" />
+                <element signature="e#624#642#0" />
+                <element signature="e#676#704#0" />
+                <element signature="e#732#834#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -348,7 +119,6 @@
       <find>100</find>
       <find>/table_one</find>
       <find>User(id</find>
-      <find>package</find>
       <find>player_t</find>
       <find>create</find>
       <find>deck</find>
@@ -361,7 +131,13 @@
       <find>player</find>
       <find>last player</find>
       <find>split</find>
+      <find>package</find>
+      <find>Blackjack.package</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Blackjack.package</replace>
+      <replace>package</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -376,16 +152,16 @@
         <option value="$PROJECT_DIR$/package/routes/Blackjack.py" />
         <option value="$PROJECT_DIR$/package/__init__.py" />
         <option value="$PROJECT_DIR$/package/Databases/database_model.py" />
-        <option value="$PROJECT_DIR$/Blackjack/app.py" />
-        <option value="$PROJECT_DIR$/Blackjack/package/routes/AccountRoutes.py" />
-        <option value="$PROJECT_DIR$/Blackjack/package/Databases/database_model.py" />
-        <option value="$PROJECT_DIR$/Blackjack/package/Forms/AccountForms.py" />
-        <option value="$PROJECT_DIR$/Blackjack/package/__init__.py" />
         <option value="$PROJECT_DIR$/Blackjack/package/static/Javascript/Card.js" />
         <option value="$PROJECT_DIR$/Blackjack/GunicornConfig.py" />
-        <option value="$PROJECT_DIR$/Blackjack/package/routes/GameplayRoutes.py" />
-        <option value="$PROJECT_DIR$/Blackjack/package/routes/Blackjack.py" />
         <option value="$PROJECT_DIR$/Blackjack/package/static/Javascript/Gameplay.js" />
+        <option value="$PROJECT_DIR$/Blackjack/package/Forms/AccountForms.py" />
+        <option value="$PROJECT_DIR$/Blackjack/package/routes/AccountRoutes.py" />
+        <option value="$PROJECT_DIR$/Blackjack/package/routes/Blackjack.py" />
+        <option value="$PROJECT_DIR$/Blackjack/package/routes/GameplayRoutes.py" />
+        <option value="$PROJECT_DIR$/Blackjack/package/__init__.py" />
+        <option value="$PROJECT_DIR$/Blackjack/app.py" />
+        <option value="$PROJECT_DIR$/Blackjack/package/Databases/database_model.py" />
       </list>
     </option>
   </component>
@@ -492,16 +268,17 @@
       <workItem from="1556919051853" duration="1580000" />
       <workItem from="1556921036043" duration="53000" />
       <workItem from="1556922195818" duration="8465000" />
+      <workItem from="1557067342681" duration="583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10098000" />
+    <option name="totallyTimeSpent" value="10681000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16986156" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1720517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -515,7 +292,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27564767" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24671532" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -537,126 +314,6 @@
     <entry file="file://$PROJECT_DIR$/package/__init__.py" />
     <entry file="file://$PROJECT_DIR$/package/routes/GameplayRoutes.py" />
     <entry file="file://$PROJECT_DIR$/package/Databases/database_model.py" />
-    <entry file="file://$PROJECT_DIR$/Blackjack/package/Databases/database_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blackjack/package/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blackjack/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/AccountRoutes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blackjack/package/Forms/AccountForms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blackjack/GunicornConfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/GameplayRoutes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
-          <folding>
-            <element signature="e#652#691#0" />
-            <element signature="e#788#930#0" />
-            <element signature="e#1020#1995#0" />
-            <element signature="e#1403#1775#0" />
-            <element signature="e#1794#1949#0" />
-            <element signature="e#2019#2069#0" />
-            <element signature="e#2091#2197#0" />
-            <element signature="e#2277#2382#0" />
-            <element signature="e#2424#3327#0" />
-            <element signature="e#2464#3327#0" />
-            <element signature="e#2508#3327#0" />
-            <element signature="e#2580#2733#0" />
-            <element signature="e#2790#2942#0" />
-            <element signature="e#2998#3151#0" />
-            <element signature="e#3208#3327#0" />
-            <element signature="e#3413#3466#0" />
-            <element signature="e#3490#4419#0" />
-            <element signature="e#3665#4324#0" />
-            <element signature="e#3770#4324#0" />
-            <element signature="e#3843#4089#0" />
-            <element signature="e#3885#3940#0" />
-            <element signature="e#4453#4760#0" />
-            <element signature="e#4558#4608#0" />
-            <element signature="e#4655#4742#0" />
-            <element signature="e#4795#6406#0" />
-            <element signature="e#5062#5324#0" />
-            <element signature="e#5364#5627#0" />
-            <element signature="e#5667#6385#0" />
-            <element signature="e#5722#6346#0" />
-            <element signature="e#5838#6346#0" />
-            <element signature="e#5919#6175#0" />
-            <element signature="e#6451#6744#0" />
-            <element signature="e#6463#6723#0" />
-            <element signature="e#6805#7530#0" />
-            <element signature="e#6914#7070#0" />
-            <element signature="e#7106#7336#0" />
-            <element signature="e#7355#7530#0" />
-            <element signature="e#7583#7913#0" />
-            <element signature="e#7709#7790#0" />
-            <element signature="e#7809#7913#0" />
-            <element signature="e#7974#8314#0" />
-            <element signature="e#8103#8184#0" />
-            <element signature="e#8203#8314#0" />
-            <element signature="e#8345#8993#0" />
-            <element signature="e#8535#8898#0" />
-            <element signature="e#8639#8898#0" />
-            <element signature="e#9059#9485#0" />
-            <element signature="e#9539#10003#0" />
-            <element signature="e#9749#9888#0" />
-            <element signature="e#10053#10858#0" />
-            <element signature="e#10351#10465#0" />
-            <element signature="e#10889#11119#0" />
-            <element signature="e#11148#11250#0" />
-            <element signature="e#11332#11868#0" />
-            <element signature="e#11598#11729#0" />
-            <element signature="e#11635#11729#0" />
-            <element signature="e#11677#11729#0" />
-            <element signature="e#12037#12374#0" />
-            <element signature="e#12424#12463#0" />
-            <element signature="e#12492#12619#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blackjack/package/static/Javascript/Card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -717,10 +374,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack/GunicornConfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Blackjack/package/static/Javascript/Gameplay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="147" column="1" lean-forward="true" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
+        <state relative-caret-position="204">
+          <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#deal#0" />
             <element signature="e#140#1140#0" />
@@ -731,54 +395,39 @@
             <element signature="e#815#1062#0" />
             <element signature="e#910#1048#0" />
             <element signature="n#!!block;n#stay#0" />
-            <element signature="e#1649#2317#0" />
-            <element signature="e#1707#2311#0" />
-            <element signature="e#2096#2150#0" />
-            <element signature="e#2155#2301#0" />
             <element signature="n#!!block;n#hit#0" />
-            <element signature="e#2681#2910#0" />
-            <element signature="e#2741#2904#0" />
             <element signature="n#!!block;n#split#0" />
-            <element signature="e#3049#3654#0" />
-            <element signature="e#3109#3648#0" />
-            <element signature="e#3264#3548#0" />
-            <element signature="e#3581#3638#0" />
             <element signature="n#!!block;n#splitCheck#0" />
-            <element signature="e#3957#4176#0" />
-            <element signature="e#4040#4101#0" />
-            <element signature="e#4107#4166#0" />
             <element signature="n#!!block;n#doubleDownCheck#0" />
-            <element signature="e#4450#4744#0" />
-            <element signature="e#4509#4738#0" />
-            <element signature="e#4591#4657#0" />
-            <element signature="e#4663#4728#0" />
             <element signature="n#!!block;n#dealerBlackJackCheck#0" />
             <element signature="n#!!block;n#bet#0" />
-            <element signature="e#5610#5965#0" />
-            <element signature="e#5969#6010#0" />
             <element signature="n#!!block;n#checkFundsBet#0" />
-            <element signature="e#6328#7006#0" />
-            <element signature="e#6396#7000#0" />
-            <element signature="e#6639#6989#0" />
             <element signature="n#!!block;n#doubleDown#0" />
-            <element signature="e#7201#7588#0" />
-            <element signature="e#7260#7582#0" />
             <element signature="n#!!block;n#evalSocket#0" />
-            <element signature="e#7771#9156#0" />
-            <element signature="e#7941#8702#0" />
-            <element signature="e#8448#8625#0" />
-            <element signature="e#8707#9110#0" />
             <element signature="n#!!block;n#dealerTotalFunc#0" />
             <element signature="n#!!block;n#roundOverButtons#0" />
-            <element signature="e#9478#9596#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack/package/Forms/AccountForms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/AccountRoutes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/Blackjack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="134" column="63" selection-start-line="134" selection-start-column="63" selection-end-line="134" selection-end-column="63" />
+        <state relative-caret-position="-1654">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding>
             <element signature="e#412#571#0" />
             <element signature="e#452#493#0" />
@@ -787,40 +436,50 @@
             <element signature="e#624#642#0" />
             <element signature="e#676#704#0" />
             <element signature="e#732#834#0" />
-            <element signature="e#915#1670#0" />
-            <element signature="e#1122#1234#0" />
-            <element signature="e#1159#1234#0" />
-            <element signature="e#1242#1286#0" />
-            <element signature="e#1487#1629#0" />
-            <element signature="e#1546#1588#0" />
-            <element signature="e#1749#2279#0" />
-            <element signature="e#1895#1916#0" />
-            <element signature="e#2067#2127#0" />
-            <element signature="e#2146#2279#0" />
-            <element signature="e#2356#2749#0" />
-            <element signature="e#2850#3517#0" />
-            <element signature="e#3146#3256#0" />
-            <element signature="e#4257#4579#0" />
-            <element signature="e#4679#5056#0" />
-            <element signature="e#5167#5375#0" />
-            <element signature="e#5401#5615#0" />
-            <element signature="e#5457#5569#0" />
-            <element signature="e#5494#5569#0" />
-            <element signature="e#5639#5984#0" />
-            <element signature="e#6010#6123#0" />
-            <element signature="e#6148#6198#0" />
-            <element signature="e#6221#6327#0" />
-            <element signature="e#6405#6982#0" />
-            <element signature="e#6609#6937#0" />
-            <element signature="e#7076#7259#0" />
-            <element signature="e#7353#8139#0" />
-            <element signature="e#7756#8076#0" />
-            <element signature="e#8171#8401#0" />
-            <element signature="e#8463#10253#0" />
-            <element signature="e#8734#9242#0" />
-            <element signature="e#9010#9023#0" />
-            <element signature="e#9297#9694#0" />
-            <element signature="e#9798#10229#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/GameplayRoutes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack/package/routes/Results.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack/package/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack/package/Databases/database_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

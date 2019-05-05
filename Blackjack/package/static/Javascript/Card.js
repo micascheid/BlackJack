@@ -33,12 +33,21 @@ socket.on('get card response', function(card){
     console.log(playerDivT);
     if(card.lid===1){
         var row1Cells = playerDivT.rows[0].cells;
-        if(row1Cells.length>=1) {
+        if (card.total >= 21){
+            var cellOnSplit1 = playerDivT.rows[0].insertCell(-1);
+            cellOnSplit1.innerHTML = cardTranslation(card.cnum).toString() + " " + suitTrans(card.suit);
+            stay();
+        }else if (row1Cells.length>=1) {
             var cellOnSplit1 = playerDivT.rows[0].insertCell(-1);
             cellOnSplit1.innerHTML = cardTranslation(card.cnum).toString() + " " + suitTrans(card.suit);
         }
     }else if(card.lid===2){
         var row2Cells = playerDivT.rows[1].cells;
+        if (card.total >= 21){
+            var cellOnSplit2 = playerDivT.rows[1].insertCell(-1);
+            cellOnSplit2.innerHTML = cardTranslation(card.cnum).toString() + " " + suitTrans(card.suit);
+            stay();
+        }
         if(row2Cells.length>=1) {
             var cellOnSplit2 = playerDivT.rows[1].insertCell(-1);
             cellOnSplit2.innerHTML = cardTranslation(card.cnum).toString() + " " + suitTrans(card.suit);
@@ -169,6 +178,9 @@ socket.on('get dealer AI', function (response) {
         } else {
             playerText.innerText = "Dealer: " + cards[cards.length - 1].total;
         }
+    } else {
+        var playerText2 = document.getElementById("playernull");
+        playerText2.innerText = "Dealer: " + dealerTotal;
     }
     console.log("gettingCalled");
     evalSocket();
