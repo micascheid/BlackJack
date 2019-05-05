@@ -147,6 +147,24 @@ function doubleDownCheck(){
     xhttp.send();
 }
 
+function dealerBlackJackCheck(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+          if(this.readyState === 4 && this.status === 200){
+              var response = this.response;
+              var result = JSON.parse(response);
+
+              if (result.dealer === "over") {
+                  console.log("DEALER BLACKJACK");
+
+                  stay();
+              }
+          }
+    };
+    xhttp.open('GET', 'dealerBlackJackCheck', false);
+    xhttp.send();
+}
+
 function bet() {
     checkFundsBet();
     //add if statement further movement of that player
@@ -259,10 +277,12 @@ socket.on('eval_response', function (result) {
             var row1 = table.rows[0];
             var row1AddCell = row1.insertCell(-1);
             row1AddCell.innerHTML = result[0].hand1[0].WLT;
+            playerAmnt = result[0].hand1[0].playerAmnt;
 
             var row2 = table.rows[1];
             var row2AddCell = row2.insertCell(-1);
             row2AddCell.innerHTML = result[1].hand2[0].WLT;
+            //playerAmnt = result[0].hand2[0].playerAmnt;
         }
         setTimeout(roundOverButtons,10000);
 });

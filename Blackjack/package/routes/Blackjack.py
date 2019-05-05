@@ -14,6 +14,7 @@ class DoubleDown:
     def dictify(self):
         return {"bet": self.bet, "funds": self.funds}
 
+
 class Bet:
     def __init__(self, funds):
         self.funds = funds
@@ -27,6 +28,7 @@ def bust(total, res):
     elif total == 21:
         res = "BLACKJACK"
     return res
+
 
 @login_required
 @app.route('/ready', methods=['GET', 'POST'])
@@ -62,6 +64,7 @@ def ready():
     db.session.commit()
     return state
 
+
 @login_required
 @app.route('/stay', methods=['GET', 'POST'])
 def stay():
@@ -83,6 +86,7 @@ def stay():
         db.session.commit()
         return jsonify({"over":"false"})
 
+
 @login_required
 @app.route('/hit', methods=['GET', 'POST'])
 def hit():
@@ -98,6 +102,7 @@ def hit():
     print(newResult)
 
     return jsonify(HitResult(str(total), newResult).dictify())
+
 
 @login_required
 @app.route('/hand_evaluation', methods=['GET', 'POST'])
@@ -122,12 +127,12 @@ def hand_evaluation():
     #return json example {"hand1":["WLT":"WIN"],"hand2:"["WLT":"WIN"]}
     return json.dumps(handResults)
 
+
 @login_required
 @app.route('/split', methods=['GET', 'POST'])
 def split():
     split_alert = "Splitting"
     player = Player.query.filter_by(id=current_user.id).first()
-    #note that player.hand = 1 will only work for 1 split aka two hands
     player.hand = 1
     db.session.commit()
     pid = player.pid
@@ -144,6 +149,7 @@ def split():
 
     return jsonify(SplitResult(split_alert, result).dictify())
 
+
 @login_required
 @app.route('/splitCheck', methods=['GET','POST'])
 def splitCheck():
@@ -158,6 +164,7 @@ def splitCheck():
 
     return result
 
+
 @login_required
 @app.route('/doubleDownCheck', methods=['GET','POST'])
 def doubleDownCheck():
@@ -170,6 +177,19 @@ def doubleDownCheck():
         return "true"
     return "false"
 
+
+@login_required
+@app.route('/dealerBlackJackCheck', methods=['GET', 'POST'])
+def dealerBlackJackCheck():
+    dealer = Player.query.filter_by(pid=1).first()
+    dealerTotal = cardTotal(dealer.pid, None)
+
+    if dealerTotal == 21:
+        return jsonify({"dealer":"over"})
+
+    return jsonify({"dealer":"continue"})
+
+
 def reset_cards():
     cards = Deck.query.all()
     for card in cards:
@@ -178,6 +198,7 @@ def reset_cards():
             card.lid = None
             db.session.commit()
     return redirect(url_for('gameplay_page'))
+
 
 def add_dealer():
     user = User(first_name="Dealer", last_name="b", email="b", username="b", password="b", funds=1000)
@@ -188,6 +209,7 @@ def add_dealer():
     db.session.add(dealer)
     db.session.commit()
 
+
 def cardTran(num):
     newNum = num
     if(newNum > 10):
@@ -197,15 +219,18 @@ def cardTran(num):
 
     return newNum
 
+
 def getPlayers():
     players = dm.Player.query.all()
     return players
+
 
 def getCards():
     cards = []
     for i in range (1,7):
         cards.append(dm.Deck.query.filter_by(pid=i))
     return cards
+
 
 @login_required
 @app.route('/bet', methods=['GET', 'POST'])
@@ -228,6 +253,7 @@ def bet():
 
     return render_template("Gameplay.html")
 
+
 @login_required
 @app.route('/check_funds', methods=['GET', 'POST'])
 def check_funds():
@@ -235,6 +261,7 @@ def check_funds():
     user = User.query.filter_by(id=player.id).first()
     funds = int(user.funds)
     return jsonify(Bet(funds).dicitify())
+
 
 @login_required
 @app.route('/double_down', methods=['GET', 'POST'])
@@ -259,6 +286,7 @@ def double_down():
 
     return jsonify(DoubleDown(new_bet, new_funds).dictify())
 
+
 def cardTotal(pid, lid):
     total = 0
     player = Player.query.filter_by(id=pid).first()
@@ -267,6 +295,7 @@ def cardTotal(pid, lid):
     for card in playerCards:
         total += cardTran(card.cnum)
     return total
+
 
 def PlayerDealerCompare(i, player, dealerScoreTotal):
 

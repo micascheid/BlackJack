@@ -129,6 +129,7 @@ socket.on('player turn response', function (turn) {
         hitButton.disabled=false;
         splitCheck();
         doubleDownCheck();
+        dealerBlackJackCheck();
     } else if(turn===7 && playerNum===totalPlayers){
         console.log("time for dealer to play, total: " + dealerTotal + " turn:" + turn);
         dealerAISocket();
