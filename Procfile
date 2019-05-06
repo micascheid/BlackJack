@@ -1,1 +1,1 @@
-web: gunicorn -w 4 Blackjack.app:app
+web: gunicorn -k flask_sockets.worker Blackjack.app:app
