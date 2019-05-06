@@ -34,7 +34,7 @@ class Player(db.Model):
     playerNum   = db.Column(db.Integer, default=None)
 
     def dictify(self):
-        return {'pid':self.pid, 'amnt':self.amnt, 'bet':self.bet, 'id':self.id, 'ptid':self.ptid}
+        return {'pid':str(self.pid), 'amnt':str(self.amnt), 'bet':str(self.bet), 'id':str(self.id), 'ptid':str(self.ptid)}
 
     def __repr__(self):
         return "pid: " + str(self.pid) + "\tamnt: " + self.amnt + "\tbet: " + self.bet + "\tid: " \
