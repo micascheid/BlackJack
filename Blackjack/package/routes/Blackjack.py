@@ -36,7 +36,7 @@ def bust(total, res):
 def ready():
     ready = "False"
     player = dm.Player.query.filter_by(id=current_user.id).first()
-    player.hand=0
+    player.hand = 0
     # player.bet = 5
     db.session.commit()
 
@@ -46,8 +46,6 @@ def ready():
             card.pid = None
             card.lid = None
             db.session.commit()
-
-
 
     #Go through all players and check their bets
     #If all their bets are > 0 then set tablestate to deal
@@ -72,11 +70,6 @@ def stay():
     player = dm.Player.query.filter_by(id=current_user.id).first()
     table = Table.query.filter_by(tid=1).first()
     state = table.tablestate
-
-    # if state == "over":
-    #     return jsonify({"state":state})
-    # else:
-    #     return jsonify({"state":state})
 
     if player.hand == 2 or player.hand == 0:
         print("player over")
@@ -103,35 +96,6 @@ def hit():
     print(newResult)
 
     return jsonify(HitResult(str(total), newResult).dictify())
-
-
-# @login_required
-# @app.route('/hand_evaluation', methods=['GET', 'POST'])
-# def hand_evaluation():
-#     dealer = Player.query.filter_by(pid=1).first()
-#     dealerScoreTotal = cardTotal(dealer.pid, None)
-#     print("Dealer Total:", dealerScoreTotal)
-#
-#     player = Player.query.filter_by(pid=current_user.id, ptid=1).first()
-#     handMax = player.hand
-#     handResults = []
-#
-#     if player.hand != 0:
-#         print("MULTIPLE HANDS")
-#         for i in range(1, (handMax+1)):
-#             print("dealerscore:", dealerScoreTotal)
-#             print("player amnt", player.amnt)
-#             hand = PlayerDealerCompare(i,player,dealerScoreTotal)
-#             handResults.append(hand)
-#     else:
-#         print("SOME REASON IN HERE")
-#         handResults.append(PlayerDealerCompare(None, player, dealerScoreTotal))
-#
-#     for i in handResults:
-#         print("Hand Result Size", i)
-#
-#     #return json example {"hand1":["WLT":"WIN"],"hand2:"["WLT":"WIN"]}
-#     return json.dumps(handResults)
 
 
 @login_required
@@ -178,7 +142,13 @@ def doubleDownCheck():
     player_cards = Deck.query.filter_by(pid=player.pid).all()
     user = User.query.filter_by(id=player.id).first()
     #total = int(player_cards[0].cnum) + int(player_cards[1].cnum)
-    total = cardTotal(current_user.id, None)
+    if player.hand == 1:
+        total = cardTotal(current_user.id, 1)
+    elif player.hand == 2:
+        total = cardTotal(current_user.id, 2)
+    else:
+        total = cardTotal(current_user.id, None)
+
     if total == 9 or total == 10 or total == 11:
         return "true"
     return "false"

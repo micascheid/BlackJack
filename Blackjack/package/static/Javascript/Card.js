@@ -38,6 +38,7 @@ socket.on('get card response', function(card){
             cellOnSplit1.innerHTML = cardTranslation(card.cnum).toString() + " " + suitTrans(card.suit);
             stay();
         }else if (row1Cells.length>=1) {
+            doubleDownCheck();
             var cellOnSplit1 = playerDivT.rows[0].insertCell(-1);
             cellOnSplit1.innerHTML = cardTranslation(card.cnum).toString() + " " + suitTrans(card.suit);
         }
@@ -49,6 +50,7 @@ socket.on('get card response', function(card){
             stay();
         }
         if(row2Cells.length>=1) {
+            doubleDownCheck();
             var cellOnSplit2 = playerDivT.rows[1].insertCell(-1);
             cellOnSplit2.innerHTML = cardTranslation(card.cnum).toString() + " " + suitTrans(card.suit);
         }
@@ -219,7 +221,8 @@ function cardTranslation(num){
     if(num === 11) cardTrans = "Jack";
     if(num === 12) cardTrans = "Queen";
     if(num === 13) cardTrans = "King";
-    if(num < 11) cardTrans = num;
+    if(num === 1) cardTrans = "Ace";
+    if(num < 11 && num > 1) cardTrans = num;
     return cardTrans;
 }
 

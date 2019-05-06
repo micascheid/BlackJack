@@ -142,7 +142,12 @@ def aceTotalChecker(total):
             aceList.append(card)
 
     for i in range(0, len(aceList)):
-        total = cardTotal(current_user.id, None)
+        player = Player.query.filter_by(id=current_user.id)
+        if player.hand == None:
+            total = cardTotal(current_user.id, None)
+        else:
+            total = cardTotal(current_user.id, player.hand)
+
         if total > 21:
             total -= 10
 
