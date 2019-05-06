@@ -260,12 +260,11 @@ socket.on('eval_response', function (result) {
         var checker = result[0].handNone;
 
         if(typeof checker !=='undefined'){
-            //console.log("player"+result[0].handNone[0].player+"Table");
             var table = document.getElementById("player"+result[0].handNone[0].player+"Table");
             var row = table.insertRow(-1);
             var rowCell = row.insertCell(-1);
             rowCell.innerHTML = result[0].handNone[0].WLT;
-            playerAmt = result[0].handNone[0].playerAmnt;
+            //playerAmnt = result[0].handNone[0].playerAmnt;
             var tablefunds = document.getElementById("tablefunds");
             if(result[0].handNone[0].playerNum === playerNum){
                 playerAmnt = result[0].handNone[0].playerAmnt;
@@ -277,12 +276,14 @@ socket.on('eval_response', function (result) {
             var row1 = table.rows[0];
             var row1AddCell = row1.insertCell(-1);
             row1AddCell.innerHTML = result[0].hand1[0].WLT;
-            playerAmnt = result[0].hand1[0].playerAmnt;
 
             var row2 = table.rows[1];
             var row2AddCell = row2.insertCell(-1);
             row2AddCell.innerHTML = result[1].hand2[0].WLT;
-            //playerAmnt = result[0].hand2[0].playerAmnt;
+
+            var tablefunds = document.getElementById("tablefunds");
+            playerAmnt = result[1].hand2[0].playerAmnt;
+            tablefunds.innerHTML = "You are player: " + playerNum + " you have " + playerAmnt;
         }
         setTimeout(roundOverButtons,10000);
 });

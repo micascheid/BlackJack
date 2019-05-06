@@ -1,12 +1,13 @@
-from Blackjack.package import app, db
+from package import app, db
 from flask_login import login_required
 from flask import render_template, redirect, url_for, jsonify, make_response, json, request
 from flask_login import current_user
-from Blackjack.package.Databases import database_model as dm
-from Blackjack.package.Databases.database_model import User, Deck, Player, Table
-from Blackjack.package.routes.Blackjack import RoundResult, HitResult, bust, reset_cards, add_dealer, cardTran, getCards, getPlayers, PlayerDealerCompare
-from Blackjack.package import socketio
+from package.Databases import database_model as dm
+from package.Databases.database_model import User, Deck, Player, Table
+from package.routes.Blackjack import RoundResult, HitResult, bust, reset_cards, add_dealer, cardTran, getCards, getPlayers, PlayerDealerCompare
+from package import socketio
 import random
+import time
 
 
 @login_required
@@ -319,15 +320,19 @@ def evalEvent():
     print("Dealer Total:", dealerScoreTotal)
 
     player = Player.query.filter_by(pid=current_user.id, ptid=1).first()
-    handMax = player.hand
     handResults = []
 
     if player.hand != 0:
-        for i in range(1, (handMax + 1)):
-            handResults.append(PlayerDealerCompare(i, player, dealerScoreTotal))
+        print("VALUE", player.amnt)
+        handResults.append(PlayerDealerCompare(1, player, dealerScoreTotal))
+        handResults.append(PlayerDealerCompare(2, player, dealerScoreTotal))
+        player.bet = 0
+        db.session.commit()
+
     else:
         handResults.append(PlayerDealerCompare(None, player, dealerScoreTotal))
-
+        player.bet = 0
+        db.session.commit()
     for i in handResults:
         print("Hand Result Size", i)
     table = Table.query.filter_by(tid=1).first()

@@ -1,10 +1,10 @@
-from Blackjack.package import app, db
+from package import app, db
 from flask_login import login_required
 from flask import render_template, redirect, url_for, jsonify, make_response, json, request
 from flask_login import current_user
-from Blackjack.package.Databases import database_model as dm
-from Blackjack.package.Databases.database_model import User, Deck, Player, Table
-from Blackjack.package.routes.Results import HitResult, SplitResult, RoundResult
+from package.Databases import database_model as dm
+from package.Databases.database_model import User, Deck, Player, Table
+from package.routes.Results import HitResult, SplitResult, RoundResult
 import time
 
 class DoubleDown:
@@ -105,28 +105,33 @@ def hit():
     return jsonify(HitResult(str(total), newResult).dictify())
 
 
-@login_required
-@app.route('/hand_evaluation', methods=['GET', 'POST'])
-def hand_evaluation():
-    dealer = Player.query.filter_by(pid=1).first()
-    dealerScoreTotal = cardTotal(dealer.pid, None)
-    print("Dealer Total:", dealerScoreTotal)
-
-    player = Player.query.filter_by(pid=current_user.id, ptid=1).first()
-    handMax = player.hand
-    handResults = []
-
-    if player.hand!=0:
-        for i in range(1, (handMax+1)):
-            handResults.append(PlayerDealerCompare(i,player,dealerScoreTotal))
-    else:
-        handResults.append(PlayerDealerCompare(None, player, dealerScoreTotal))
-
-    for i in handResults:
-        print("Hand Result Size", i)
-
-    #return json example {"hand1":["WLT":"WIN"],"hand2:"["WLT":"WIN"]}
-    return json.dumps(handResults)
+# @login_required
+# @app.route('/hand_evaluation', methods=['GET', 'POST'])
+# def hand_evaluation():
+#     dealer = Player.query.filter_by(pid=1).first()
+#     dealerScoreTotal = cardTotal(dealer.pid, None)
+#     print("Dealer Total:", dealerScoreTotal)
+#
+#     player = Player.query.filter_by(pid=current_user.id, ptid=1).first()
+#     handMax = player.hand
+#     handResults = []
+#
+#     if player.hand != 0:
+#         print("MULTIPLE HANDS")
+#         for i in range(1, (handMax+1)):
+#             print("dealerscore:", dealerScoreTotal)
+#             print("player amnt", player.amnt)
+#             hand = PlayerDealerCompare(i,player,dealerScoreTotal)
+#             handResults.append(hand)
+#     else:
+#         print("SOME REASON IN HERE")
+#         handResults.append(PlayerDealerCompare(None, player, dealerScoreTotal))
+#
+#     for i in handResults:
+#         print("Hand Result Size", i)
+#
+#     #return json example {"hand1":["WLT":"WIN"],"hand2:"["WLT":"WIN"]}
+#     return json.dumps(handResults)
 
 
 @login_required
@@ -307,34 +312,38 @@ def PlayerDealerCompare(i, player, dealerScoreTotal):
     if playerScoreTotal > dealerScoreTotal and playerScoreTotal <= 21:
         # JSON variables to pass
         winnings = player.bet
+        if playerScoreTotal == 21:
+            winnings = winnings*1.5
+
         tableValue = player.amnt + winnings
 
         player.amnt = tableValue
-        player.bet = 0
         db.session.commit()
         user.funds = player.amnt
         db.session.commit()
+
         finalResult = {handNum:[{"WLT":"win","player":player.playerNum,"playerAmnt":player.amnt,"playerNum":player.playerNum}]}
 
-    if playerScoreTotal < dealerScoreTotal and dealerScoreTotal > 21 and playerScoreTotal < 21:
+    if playerScoreTotal < dealerScoreTotal and dealerScoreTotal > 21 and playerScoreTotal <= 21:
         # JSON variables to pass
         winnings = player.bet
+        if playerScoreTotal == 21:
+            winnings = winnings*1.5
+
         tableValue = player.amnt + winnings
 
         player.amnt = tableValue
-        player.bet = 0
         db.session.commit()
         user.funds = player.amnt
         db.session.commit()
-        userCheckFund = current_user.funds
-        print("AMNT:", userCheckFund)
+
         finalResult = {handNum: [{"WLT": "win", "player": player.playerNum, "playerAmnt": player.amnt, "playerNum": player.playerNum}]}
 
     if playerScoreTotal == dealerScoreTotal:
         tableValue = player.amnt
         # Database manipulation
+
         player.amnt = tableValue
-        player.bet = 0
         db.session.commit()
         user.funds = player.amnt
         db.session.commit()
@@ -345,15 +354,12 @@ def PlayerDealerCompare(i, player, dealerScoreTotal):
         # JSON variables to pass
         winnings = -1 * player.bet
         tableValue = player.amnt + winnings
+        print("TABLEVALUE", tableValue)
 
         player.amnt = tableValue
         db.session.commit()
-        player.bet = 0
-        db.session.commit()
         user.funds = player.amnt
-        db.session.commit()
 
-        # JSON object
         finalResult = {handNum:[{"WLT":"Loss","player":player.playerNum,"playerAmnt":player.amnt,"playerNum":player.playerNum}]}
 
     return finalResult

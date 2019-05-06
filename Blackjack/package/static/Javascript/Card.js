@@ -111,6 +111,7 @@ socket.on('get card response', function(card){
             playerText.innerText = player + ": BlackJack";
             if(card.lid===2){
                 // playerTurn(playerNum);
+               stay();
                hitButton.disabled=true;
                stayButton.disabled=true;
             }
