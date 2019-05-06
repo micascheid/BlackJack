@@ -414,8 +414,11 @@ def databaseWipe():
     #Then run deck build afterwards
 
     db.session.query(Deck).delete()
+    db.session.commit()
     db.session.query(Player).delete()
+    db.session.commit()
     db.session.query(Table).delete()
+    db.session.commit()
     db.session.query(User).delete()
     db.session.commit()
 
