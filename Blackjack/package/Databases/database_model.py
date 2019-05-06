@@ -1,4 +1,4 @@
-from Blackjack.package import db, login_manager
+from package import db, login_manager
 from flask_login import UserMixin
 
 @login_manager.user_loader
@@ -7,7 +7,7 @@ def load_user(user_id):
 
 class User(db.Model, UserMixin):
     __tablename__ = 'user'
-    id          = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    id          = db.Column(db.Integer, primary_key=True)
     first_name  = db.Column(db.String(60), nullable=False)
     last_name   = db.Column(db.String(60), nullable=False)
     email       = db.Column(db.String(60), unique=True, nullable=False)
@@ -24,7 +24,7 @@ class User(db.Model, UserMixin):
 
 class Player(db.Model):
     __tablename__ = 'player'
-    pid         = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    pid         = db.Column(db.Integer, primary_key=True)
     amnt        = db.Column(db.Integer, nullable=False)
     bet         = db.Column(db.Integer, nullable=False)
     id          = db.Column(db.Integer, db.ForeignKey('user.id'))

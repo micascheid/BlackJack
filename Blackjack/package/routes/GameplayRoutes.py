@@ -1,11 +1,11 @@
-from Blackjack.package import app, db
+from package import app, db
 from flask_login import login_required
 from flask import render_template, redirect, url_for, jsonify, make_response, json, request
 from flask_login import current_user
-from Blackjack.package.Databases import database_model as dm
-from Blackjack.package.Databases.database_model import User, Deck, Player, Table
-from Blackjack.package.routes.Blackjack import RoundResult, HitResult, bust, reset_cards, add_dealer, cardTran, getCards, getPlayers, PlayerDealerCompare
-from Blackjack.package import socketio
+from package.Databases import database_model as dm
+from package.Databases.database_model import User, Deck, Player, Table
+from package.routes.Blackjack import RoundResult, HitResult, bust, reset_cards, add_dealer, cardTran, getCards, getPlayers, PlayerDealerCompare
+from package import socketio
 import random
 import time
 
@@ -142,8 +142,8 @@ def aceTotalChecker(total):
             aceList.append(card)
 
     for i in range(0, len(aceList)):
-        player = Player.query.filter_by(id=current_user.id)
-        if player.hand == None:
+        player = Player.query.filter_by(id=current_user.id).first()
+        if player.hand == 0:
             total = cardTotal(current_user.id, None)
         else:
             total = cardTotal(current_user.id, player.hand)
@@ -324,7 +324,10 @@ def evalEvent():
     dealerScoreTotal = cardTotal(dealer.pid, None)
     print("Dealer Total:", dealerScoreTotal)
 
+
+
     player = Player.query.filter_by(pid=current_user.id, ptid=1).first()
+    print("CURRENT USER HAND", str(player.hand))
     handResults = []
 
     if player.hand != 0:
@@ -424,6 +427,22 @@ def databaseWipe():
 
     return redirect('deck_build')
 
+
+# @login_required
+# @app.route('/remove', methods=['GET', 'POST'])
+# def remove():
+#     player = Player.query.filter_by(id=current_user.id).first()
+#     cards = Deck.query.filter_by(pid=player.pid).all()
+#     table = Table.query.filter_by(tid=1).first()
+#     table.seat += 1
+#     table.tablestate="joinable"
+#     player.playerNum -= 1
+#     for card in cards:
+#         db.session.delete(card)
+#     db.session.delete(player)
+#     db.session.commit()
+#     print("END OF REMOVE ROUTE")
+#     return jsonify({"playerid": player.pid})
 
 
 

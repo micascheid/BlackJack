@@ -292,7 +292,6 @@ function dealerTotalFunc(card) {
     return card.total;
 }
 
-
 function roundOverButtons(){
     var betButton = document.getElementById("bet");
     var currentbet = document.getElementById("currentbet");
@@ -311,6 +310,18 @@ function roundOverButtons(){
 
 
 }
+
+// function init(){
+//     window.onbeforeunload = function () {
+//         console.log("On Before Unload");
+//         alert("UNLOAD");
+//         window.alert("WINDOW IS CLOSING");
+//         var xhttp = new XMLHttpRequest();
+//         xhttp.open("GET","/remove", true);
+//         xhttp.send();
+//     }
+// }
+// window.onload = init();
 
 
 

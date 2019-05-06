@@ -1,10 +1,10 @@
-from Blackjack.package import app, db
+from package import app, db
 from flask_login import login_required
 from flask import render_template, redirect, url_for, jsonify, make_response, json, request
 from flask_login import current_user
-from Blackjack.package.Databases import database_model as dm
-from Blackjack.package.Databases.database_model import User, Deck, Player, Table
-from Blackjack.package.routes.Results import HitResult, SplitResult, RoundResult
+from package.Databases import database_model as dm
+from package.Databases.database_model import User, Deck, Player, Table
+from package.routes.Results import HitResult, SplitResult, RoundResult
 import time
 
 class DoubleDown:
@@ -35,8 +35,11 @@ def bust(total, res):
 @app.route('/ready', methods=['GET', 'POST'])
 def ready():
     ready = "False"
+
     player = dm.Player.query.filter_by(id=current_user.id).first()
+    print("CURRENT USER HAND", str(player.hand))
     player.hand = 0
+
     # player.bet = 5
     db.session.commit()
 

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="358ab214-460e-45bd-8b27-9c384cce6006" name="Default Changelist" comment="" />
+    <list default="true" id="358ab214-460e-45bd-8b27-9c384cce6006" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/Databases/database_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/package/Databases/database_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/Forms/AccountForms.py" beforeDir="false" afterPath="$PROJECT_DIR$/package/Forms/AccountForms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/package/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/routes/AccountRoutes.py" beforeDir="false" afterPath="$PROJECT_DIR$/package/routes/AccountRoutes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/routes/Blackjack.py" beforeDir="false" afterPath="$PROJECT_DIR$/package/routes/Blackjack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/routes/GameplayRoutes.py" beforeDir="false" afterPath="$PROJECT_DIR$/package/routes/GameplayRoutes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/static/Javascript/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/package/static/Javascript/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/static/Javascript/Gameplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/package/static/Javascript/Gameplay.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,48 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package/routes/Blackjack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-              <folding>
-                <element signature="e#424#583#0" />
-                <element signature="e#464#505#0" />
-                <element signature="e#538#583#0" />
-                <element signature="e#601#716#0" />
-                <element signature="e#636#654#0" />
-                <element signature="e#688#716#0" />
-                <element signature="e#744#846#0" />
-                <element signature="e#928#1683#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package/Databases/database_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
-              <caret line="26" column="76" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" selection-start-column="30" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GunicornConfig.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+            <state relative-caret-position="-11">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -62,68 +33,72 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package/routes/GameplayRoutes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="411" column="19" selection-start-line="411" selection-start-column="19" selection-end-line="411" selection-end-column="19" />
+            <state relative-caret-position="360">
+              <caret line="318" column="51" selection-start-line="318" selection-start-column="46" selection-end-line="318" selection-end-column="51" />
               <folding>
-                <element signature="e#614#653#0" />
-                <element signature="e#750#892#0" />
-                <element signature="e#1365#1737#0" />
-                <element signature="e#1756#1911#0" />
-                <element signature="e#1981#2031#0" />
-                <element signature="e#2053#2159#0" />
-                <element signature="e#2209#3345#0" />
-                <element signature="e#2239#2344#0" />
-                <element signature="e#2386#3289#0" />
-                <element signature="e#2426#3289#0" />
-                <element signature="e#2470#3289#0" />
-                <element signature="e#2542#2695#0" />
-                <element signature="e#2752#2904#0" />
-                <element signature="e#2960#3113#0" />
-                <element signature="e#3170#3289#0" />
-                <element signature="e#3369#3422#0" />
-                <element signature="e#3446#4375#0" />
-                <element signature="e#3621#4280#0" />
-                <element signature="e#3726#4280#0" />
-                <element signature="e#3799#4045#0" />
-                <element signature="e#3841#3896#0" />
-                <element signature="e#4751#6362#0" />
-                <element signature="e#5018#5280#0" />
-                <element signature="e#5320#5583#0" />
-                <element signature="e#5623#6341#0" />
-                <element signature="e#5678#6302#0" />
-                <element signature="e#5794#6302#0" />
-                <element signature="e#5875#6131#0" />
-                <element signature="e#6407#6700#0" />
-                <element signature="e#6419#6679#0" />
-                <element signature="e#6761#7486#0" />
-                <element signature="e#6870#7026#0" />
-                <element signature="e#7062#7292#0" />
-                <element signature="e#7311#7486#0" />
-                <element signature="e#7539#7869#0" />
-                <element signature="e#7665#7746#0" />
-                <element signature="e#7765#7869#0" />
-                <element signature="e#7930#8270#0" />
-                <element signature="e#8059#8140#0" />
-                <element signature="e#8159#8270#0" />
-                <element signature="e#8301#8949#0" />
-                <element signature="e#8491#8854#0" />
-                <element signature="e#8595#8854#0" />
-                <element signature="e#9015#9441#0" />
-                <element signature="e#9495#9959#0" />
-                <element signature="e#9705#9844#0" />
-                <element signature="e#10009#10957#0" />
-                <element signature="e#10281#10513#0" />
-                <element signature="e#10533#10655#0" />
-                <element signature="e#10988#11218#0" />
-                <element signature="e#11246#11348#0" />
-                <element signature="e#11430#11966#0" />
-                <element signature="e#11696#11827#0" />
-                <element signature="e#11733#11827#0" />
-                <element signature="e#11775#11827#0" />
-                <element signature="e#12057#12097#0" />
-                <element signature="e#12135#12472#0" />
-                <element signature="e#12522#12561#0" />
-                <element signature="e#12641#12707#0" />
+                <element signature="e#664#703#0" />
+                <element signature="e#800#942#0" />
+                <element signature="e#1032#2007#0" />
+                <element signature="e#1415#1787#0" />
+                <element signature="e#1806#1961#0" />
+                <element signature="e#2031#2081#0" />
+                <element signature="e#2103#2209#0" />
+                <element signature="e#2259#3395#0" />
+                <element signature="e#2289#2394#0" />
+                <element signature="e#2436#3339#0" />
+                <element signature="e#2476#3339#0" />
+                <element signature="e#2520#3339#0" />
+                <element signature="e#2592#2745#0" />
+                <element signature="e#2802#2954#0" />
+                <element signature="e#3010#3163#0" />
+                <element signature="e#3220#3339#0" />
+                <element signature="e#3419#3472#0" />
+                <element signature="e#3496#4425#0" />
+                <element signature="e#3671#4330#0" />
+                <element signature="e#3776#4330#0" />
+                <element signature="e#3849#4095#0" />
+                <element signature="e#3891#3946#0" />
+                <element signature="e#4459#4937#0" />
+                <element signature="e#4564#4614#0" />
+                <element signature="e#4661#4919#0" />
+                <element signature="e#4972#6583#0" />
+                <element signature="e#5239#5501#0" />
+                <element signature="e#5541#5804#0" />
+                <element signature="e#5844#6562#0" />
+                <element signature="e#5899#6523#0" />
+                <element signature="e#6015#6523#0" />
+                <element signature="e#6096#6352#0" />
+                <element signature="e#6628#6921#0" />
+                <element signature="e#6640#6900#0" />
+                <element signature="e#6982#7707#0" />
+                <element signature="e#7091#7247#0" />
+                <element signature="e#7283#7513#0" />
+                <element signature="e#7532#7707#0" />
+                <element signature="e#7760#8090#0" />
+                <element signature="e#7886#7967#0" />
+                <element signature="e#7986#8090#0" />
+                <element signature="e#8151#8491#0" />
+                <element signature="e#8280#8361#0" />
+                <element signature="e#8380#8491#0" />
+                <element signature="e#8522#9170#0" />
+                <element signature="e#8712#9075#0" />
+                <element signature="e#8816#9075#0" />
+                <element signature="e#9236#9662#0" />
+                <element signature="e#10230#11178#0" />
+                <element signature="e#10508#10740#0" />
+                <element signature="e#10760#10882#0" />
+                <element signature="e#11209#11439#0" />
+                <element signature="e#11467#11569#0" />
+                <element signature="e#11651#12187#0" />
+                <element signature="e#11917#12048#0" />
+                <element signature="e#11954#12048#0" />
+                <element signature="e#11996#12048#0" />
+                <element signature="e#12278#12318#0" />
+                <element signature="e#12356#12693#0" />
+                <element signature="e#12743#12782#0" />
+                <element signature="e#12862#13243#0" />
+                <element signature="e#12862#12928#0" />
+                <element signature="e#13196#13213#0" />
               </folding>
             </state>
           </provider>
@@ -132,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package/static/Javascript/Gameplay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="131" column="26" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="26" />
+            <state relative-caret-position="408">
+              <caret line="255" column="45" selection-start-line="255" selection-start-column="45" selection-end-line="255" selection-end-column="45" />
               <folding>
                 <element signature="n#!!block;n#deal#0" />
                 <element signature="e#140#1140#0" />
@@ -148,11 +123,24 @@
                 <element signature="e#1707#2312#0" />
                 <element signature="e#2097#2151#0" />
                 <element signature="e#2156#2302#0" />
+                <element signature="n#!!block;n#hit#0" />
+                <element signature="e#2682#2911#0" />
+                <element signature="e#2742#2905#0" />
+                <element signature="n#!!block;n#split#0" />
+                <element signature="e#3050#3655#0" />
+                <element signature="e#3110#3649#0" />
+                <element signature="e#3265#3549#0" />
+                <element signature="e#3582#3639#0" />
                 <element signature="n#!!block;n#splitCheck#0" />
                 <element signature="e#3899#4183#0" />
                 <element signature="e#3958#4177#0" />
                 <element signature="e#4041#4102#0" />
                 <element signature="e#4108#4167#0" />
+                <element signature="n#!!block;n#doubleDownCheck#0" />
+                <element signature="e#4451#4745#0" />
+                <element signature="e#4510#4739#0" />
+                <element signature="e#4592#4658#0" />
+                <element signature="e#4664#4729#0" />
                 <element signature="n#!!block;n#dealerBlackJackCheck#0" />
                 <element signature="e#4931#5244#0" />
                 <element signature="e#4991#5238#0" />
@@ -174,20 +162,66 @@
                 <element signature="e#9141#9764#0" />
                 <element signature="n#!!block;n#dealerTotalFunc#0" />
                 <element signature="n#!!block;n#roundOverButtons#0" />
+                <element signature="e#10132#10250#0" />
+                <element signature="e#10374#10393#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package/static/Javascript/Card.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            <state relative-caret-position="313">
+              <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
               <folding>
+                <element signature="n#!!block;n#cardSocket#0" />
                 <element signature="n#!!block;n#cardSocketRand#0" />
+                <element signature="e#295#4246#0" />
+                <element signature="e#628#781#0" />
+                <element signature="e#995#1053#0" />
+                <element signature="e#1103#1635#0" />
+                <element signature="e#1184#1386#0" />
+                <element signature="e#1416#1629#0" />
+                <element signature="e#1656#2191#0" />
+                <element signature="e#1737#1939#0" />
+                <element signature="e#1972#2185#0" />
+                <element signature="e#2195#2384#0" />
+                <element signature="e#2549#2581#0" />
+                <element signature="e#2605#3565#0" />
+                <element signature="e#2634#2877#0" />
+                <element signature="e#2671#2740#0" />
+                <element signature="e#2746#2828#0" />
+                <element signature="e#2905#3237#0" />
+                <element signature="e#3110#3227#0" />
+                <element signature="e#3265#3559#0" />
+                <element signature="e#3433#3549#0" />
+                <element signature="e#3590#4244#0" />
+                <element signature="e#3619#3694#0" />
+                <element signature="e#3722#3950#0" />
+                <element signature="e#3844#3940#0" />
+                <element signature="e#3978#4238#0" />
+                <element signature="e#4067#4228#0" />
+                <element signature="n#!!block;n#playerTurn#0" />
+                <element signature="e#4374#5276#0" />
+                <element signature="e#4758#4941#0" />
+                <element signature="e#4987#5247#0" />
+                <element signature="n#!!block;n#dealerAISocket#0" />
+                <element signature="n#!!block;n#passPlayerNum#0" />
+                <element signature="n#!!block;n#passPlayerAmnt#0" />
+                <element signature="n#!!block;n#getCard#0" />
+                <element signature="e#6817#7230#0" />
+                <element signature="e#6876#7224#0" />
+                <element signature="e#7028#7213#0" />
+                <element signature="e#7131#7197#0" />
+                <element signature="n#!!block;n#cardTranslation#0" />
                 <element signature="n#!!block;n#suitTrans#0" />
                 <element signature="n#!!block;n#ready#0" />
+                <element signature="e#8595#8946#0" />
+                <element signature="e#8866#8936#0" />
+                <element signature="e#9037#9290#0" />
+                <element signature="e#9100#9280#0" />
+                <element signature="e#9219#9266#0" />
               </folding>
             </state>
           </provider>
@@ -197,8 +231,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Blackjack.pa</find>
-      <find>&quot;Dealer</find>
       <find>100</find>
       <find>/table_one</find>
       <find>User(id</find>
@@ -206,7 +238,6 @@
       <find>User(fir</find>
       <find>Hand Res</find>
       <find>Black</find>
-      <find>Blackjack.package</find>
       <find>Hand Re</find>
       <find>BlackJack</find>
       <find>dealerscore</find>
@@ -224,10 +255,17 @@
       <find>ace</find>
       <find>package</find>
       <find>database_wipe</find>
+      <find>/deck</find>
+      <find>data</find>
+      <find>deck_build</find>
+      <find>Blackjack.package</find>
+      <find>eval</find>
+      <find>innerText</find>
     </findStrings>
     <replaceStrings>
-      <replace>package</replace>
       <replace>Blackjack.package</replace>
+      <replace>package</replace>
+      <replace>innerHTML</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -239,19 +277,18 @@
         <option value="$PROJECT_DIR$/package/routes/AccountRoutes.py" />
         <option value="$PROJECT_DIR$/package/Forms/AccountForms.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/package/static/Javascript/Gameplay.js" />
         <option value="$PROJECT_DIR$/package/templates/BlackjackTables/Table1.html" />
-        <option value="$PROJECT_DIR$/package/static/Javascript/Card.js" />
-        <option value="$PROJECT_DIR$/package/routes/Blackjack.py" />
         <option value="$PROJECT_DIR$/package/__init__.py" />
-        <option value="$PROJECT_DIR$/package/routes/GameplayRoutes.py" />
+        <option value="$PROJECT_DIR$/package/static/Javascript/Gameplay.js" />
         <option value="$PROJECT_DIR$/package/Databases/database_model.py" />
+        <option value="$PROJECT_DIR$/package/routes/GameplayRoutes.py" />
+        <option value="$PROJECT_DIR$/package/routes/Blackjack.py" />
+        <option value="$PROJECT_DIR$/package/static/Javascript/Card.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1279" />
-    <option name="y" value="303" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="777" />
   </component>
@@ -272,6 +309,12 @@
               <item name="Blackjack" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blackjack" type="462c0819:PsiDirectoryNode" />
               <item name="package" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blackjack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blackjack" type="462c0819:PsiDirectoryNode" />
+              <item name="package" type="462c0819:PsiDirectoryNode" />
+              <item name="Databases" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -314,17 +357,18 @@
       <workItem from="1557067929215" duration="15560000" />
       <workItem from="1557109674866" duration="3213000" />
       <workItem from="1557149492835" duration="2487000" />
-      <workItem from="1557152912986" duration="5054000" />
+      <workItem from="1557152912986" duration="6617000" />
+      <workItem from="1557171961912" duration="3743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28997000" />
+    <option name="totallyTimeSpent" value="34303000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1279" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18317358" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18578352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -338,7 +382,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30984455" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3240876" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -385,27 +429,120 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GunicornConfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package/Databases/database_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="37" column="91" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package/routes/Blackjack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        <state relative-caret-position="-11">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package/routes/GameplayRoutes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="318" column="51" selection-start-line="318" selection-start-column="46" selection-end-line="318" selection-end-column="51" />
           <folding>
-            <element signature="e#424#583#0" />
-            <element signature="e#464#505#0" />
-            <element signature="e#538#583#0" />
-            <element signature="e#601#716#0" />
-            <element signature="e#636#654#0" />
-            <element signature="e#688#716#0" />
-            <element signature="e#744#846#0" />
-            <element signature="e#928#1683#0" />
+            <element signature="e#664#703#0" />
+            <element signature="e#800#942#0" />
+            <element signature="e#1032#2007#0" />
+            <element signature="e#1415#1787#0" />
+            <element signature="e#1806#1961#0" />
+            <element signature="e#2031#2081#0" />
+            <element signature="e#2103#2209#0" />
+            <element signature="e#2259#3395#0" />
+            <element signature="e#2289#2394#0" />
+            <element signature="e#2436#3339#0" />
+            <element signature="e#2476#3339#0" />
+            <element signature="e#2520#3339#0" />
+            <element signature="e#2592#2745#0" />
+            <element signature="e#2802#2954#0" />
+            <element signature="e#3010#3163#0" />
+            <element signature="e#3220#3339#0" />
+            <element signature="e#3419#3472#0" />
+            <element signature="e#3496#4425#0" />
+            <element signature="e#3671#4330#0" />
+            <element signature="e#3776#4330#0" />
+            <element signature="e#3849#4095#0" />
+            <element signature="e#3891#3946#0" />
+            <element signature="e#4459#4937#0" />
+            <element signature="e#4564#4614#0" />
+            <element signature="e#4661#4919#0" />
+            <element signature="e#4972#6583#0" />
+            <element signature="e#5239#5501#0" />
+            <element signature="e#5541#5804#0" />
+            <element signature="e#5844#6562#0" />
+            <element signature="e#5899#6523#0" />
+            <element signature="e#6015#6523#0" />
+            <element signature="e#6096#6352#0" />
+            <element signature="e#6628#6921#0" />
+            <element signature="e#6640#6900#0" />
+            <element signature="e#6982#7707#0" />
+            <element signature="e#7091#7247#0" />
+            <element signature="e#7283#7513#0" />
+            <element signature="e#7532#7707#0" />
+            <element signature="e#7760#8090#0" />
+            <element signature="e#7886#7967#0" />
+            <element signature="e#7986#8090#0" />
+            <element signature="e#8151#8491#0" />
+            <element signature="e#8280#8361#0" />
+            <element signature="e#8380#8491#0" />
+            <element signature="e#8522#9170#0" />
+            <element signature="e#8712#9075#0" />
+            <element signature="e#8816#9075#0" />
+            <element signature="e#9236#9662#0" />
+            <element signature="e#10230#11178#0" />
+            <element signature="e#10508#10740#0" />
+            <element signature="e#10760#10882#0" />
+            <element signature="e#11209#11439#0" />
+            <element signature="e#11467#11569#0" />
+            <element signature="e#11651#12187#0" />
+            <element signature="e#11917#12048#0" />
+            <element signature="e#11954#12048#0" />
+            <element signature="e#11996#12048#0" />
+            <element signature="e#12278#12318#0" />
+            <element signature="e#12356#12693#0" />
+            <element signature="e#12743#12782#0" />
+            <element signature="e#12862#13243#0" />
+            <element signature="e#12862#12928#0" />
+            <element signature="e#13196#13213#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package/static/Javascript/Gameplay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="131" column="26" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="26" />
+        <state relative-caret-position="408">
+          <caret line="255" column="45" selection-start-line="255" selection-start-column="45" selection-end-line="255" selection-end-column="45" />
           <folding>
             <element signature="n#!!block;n#deal#0" />
             <element signature="e#140#1140#0" />
@@ -420,11 +557,24 @@
             <element signature="e#1707#2312#0" />
             <element signature="e#2097#2151#0" />
             <element signature="e#2156#2302#0" />
+            <element signature="n#!!block;n#hit#0" />
+            <element signature="e#2682#2911#0" />
+            <element signature="e#2742#2905#0" />
+            <element signature="n#!!block;n#split#0" />
+            <element signature="e#3050#3655#0" />
+            <element signature="e#3110#3649#0" />
+            <element signature="e#3265#3549#0" />
+            <element signature="e#3582#3639#0" />
             <element signature="n#!!block;n#splitCheck#0" />
             <element signature="e#3899#4183#0" />
             <element signature="e#3958#4177#0" />
             <element signature="e#4041#4102#0" />
             <element signature="e#4108#4167#0" />
+            <element signature="n#!!block;n#doubleDownCheck#0" />
+            <element signature="e#4451#4745#0" />
+            <element signature="e#4510#4739#0" />
+            <element signature="e#4592#4658#0" />
+            <element signature="e#4664#4729#0" />
             <element signature="n#!!block;n#dealerBlackJackCheck#0" />
             <element signature="e#4931#5244#0" />
             <element signature="e#4991#5238#0" />
@@ -446,121 +596,65 @@
             <element signature="e#9141#9764#0" />
             <element signature="n#!!block;n#dealerTotalFunc#0" />
             <element signature="n#!!block;n#roundOverButtons#0" />
+            <element signature="e#10132#10250#0" />
+            <element signature="e#10374#10393#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package/static/Javascript/Card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="313">
+          <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
           <folding>
+            <element signature="n#!!block;n#cardSocket#0" />
             <element signature="n#!!block;n#cardSocketRand#0" />
+            <element signature="e#295#4246#0" />
+            <element signature="e#628#781#0" />
+            <element signature="e#995#1053#0" />
+            <element signature="e#1103#1635#0" />
+            <element signature="e#1184#1386#0" />
+            <element signature="e#1416#1629#0" />
+            <element signature="e#1656#2191#0" />
+            <element signature="e#1737#1939#0" />
+            <element signature="e#1972#2185#0" />
+            <element signature="e#2195#2384#0" />
+            <element signature="e#2549#2581#0" />
+            <element signature="e#2605#3565#0" />
+            <element signature="e#2634#2877#0" />
+            <element signature="e#2671#2740#0" />
+            <element signature="e#2746#2828#0" />
+            <element signature="e#2905#3237#0" />
+            <element signature="e#3110#3227#0" />
+            <element signature="e#3265#3559#0" />
+            <element signature="e#3433#3549#0" />
+            <element signature="e#3590#4244#0" />
+            <element signature="e#3619#3694#0" />
+            <element signature="e#3722#3950#0" />
+            <element signature="e#3844#3940#0" />
+            <element signature="e#3978#4238#0" />
+            <element signature="e#4067#4228#0" />
+            <element signature="n#!!block;n#playerTurn#0" />
+            <element signature="e#4374#5276#0" />
+            <element signature="e#4758#4941#0" />
+            <element signature="e#4987#5247#0" />
+            <element signature="n#!!block;n#dealerAISocket#0" />
+            <element signature="n#!!block;n#passPlayerNum#0" />
+            <element signature="n#!!block;n#passPlayerAmnt#0" />
+            <element signature="n#!!block;n#getCard#0" />
+            <element signature="e#6817#7230#0" />
+            <element signature="e#6876#7224#0" />
+            <element signature="e#7028#7213#0" />
+            <element signature="e#7131#7197#0" />
+            <element signature="n#!!block;n#cardTranslation#0" />
             <element signature="n#!!block;n#suitTrans#0" />
             <element signature="n#!!block;n#ready#0" />
+            <element signature="e#8595#8946#0" />
+            <element signature="e#8866#8936#0" />
+            <element signature="e#9037#9290#0" />
+            <element signature="e#9100#9280#0" />
+            <element signature="e#9219#9266#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package/routes/GameplayRoutes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="411" column="19" selection-start-line="411" selection-start-column="19" selection-end-line="411" selection-end-column="19" />
-          <folding>
-            <element signature="e#614#653#0" />
-            <element signature="e#750#892#0" />
-            <element signature="e#1365#1737#0" />
-            <element signature="e#1756#1911#0" />
-            <element signature="e#1981#2031#0" />
-            <element signature="e#2053#2159#0" />
-            <element signature="e#2209#3345#0" />
-            <element signature="e#2239#2344#0" />
-            <element signature="e#2386#3289#0" />
-            <element signature="e#2426#3289#0" />
-            <element signature="e#2470#3289#0" />
-            <element signature="e#2542#2695#0" />
-            <element signature="e#2752#2904#0" />
-            <element signature="e#2960#3113#0" />
-            <element signature="e#3170#3289#0" />
-            <element signature="e#3369#3422#0" />
-            <element signature="e#3446#4375#0" />
-            <element signature="e#3621#4280#0" />
-            <element signature="e#3726#4280#0" />
-            <element signature="e#3799#4045#0" />
-            <element signature="e#3841#3896#0" />
-            <element signature="e#4751#6362#0" />
-            <element signature="e#5018#5280#0" />
-            <element signature="e#5320#5583#0" />
-            <element signature="e#5623#6341#0" />
-            <element signature="e#5678#6302#0" />
-            <element signature="e#5794#6302#0" />
-            <element signature="e#5875#6131#0" />
-            <element signature="e#6407#6700#0" />
-            <element signature="e#6419#6679#0" />
-            <element signature="e#6761#7486#0" />
-            <element signature="e#6870#7026#0" />
-            <element signature="e#7062#7292#0" />
-            <element signature="e#7311#7486#0" />
-            <element signature="e#7539#7869#0" />
-            <element signature="e#7665#7746#0" />
-            <element signature="e#7765#7869#0" />
-            <element signature="e#7930#8270#0" />
-            <element signature="e#8059#8140#0" />
-            <element signature="e#8159#8270#0" />
-            <element signature="e#8301#8949#0" />
-            <element signature="e#8491#8854#0" />
-            <element signature="e#8595#8854#0" />
-            <element signature="e#9015#9441#0" />
-            <element signature="e#9495#9959#0" />
-            <element signature="e#9705#9844#0" />
-            <element signature="e#10009#10957#0" />
-            <element signature="e#10281#10513#0" />
-            <element signature="e#10533#10655#0" />
-            <element signature="e#10988#11218#0" />
-            <element signature="e#11246#11348#0" />
-            <element signature="e#11430#11966#0" />
-            <element signature="e#11696#11827#0" />
-            <element signature="e#11733#11827#0" />
-            <element signature="e#11775#11827#0" />
-            <element signature="e#12057#12097#0" />
-            <element signature="e#12135#12472#0" />
-            <element signature="e#12522#12561#0" />
-            <element signature="e#12641#12707#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package/Databases/database_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="26" column="76" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GunicornConfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
         </state>
       </provider>
     </entry>
