@@ -34,11 +34,11 @@ class Player(db.Model):
     playerNum   = db.Column(db.Integer, default=None)
 
     def dictify(self):
-        return {'pid':str(self.pid), 'amnt':str(self.amnt), 'bet':str(self.bet), 'id':str(self.id), 'ptid':str(self.ptid)}
+        return {'pid':self.pid, 'amnt':self.amnt, 'bet':self.bet, 'id':self.id, 'ptid':self.ptid}
 
     def __repr__(self):
-        return "pid: " + str(self.pid) + "\tamnt: " + self.amnt + "\tbet: " + self.bet + "\tid: " \
-               + self.id + "\tptid: " + self.ptid
+        return "pid: " + str(self.pid) + "\tamnt: " + str(self.amnt) + "\tbet: " + str(self.bet) + "\tid: " \
+               + str(self.id) + "\tptid: " + str(self.ptid)
 
 class Table(db.Model):
     __tablename__ = 'table'
