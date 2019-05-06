@@ -32,6 +32,7 @@ class Player(db.Model):
     hand        = db.Column(db.Integer, default=0)
     over        = db.Column(db.Boolean, default=False)
     playerNum   = db.Column(db.Integer, default=None)
+    #
 
     def dictify(self):
         return {'pid':self.pid, 'amnt':self.amnt, 'bet':self.bet, 'id':self.id, 'ptid':self.ptid}
