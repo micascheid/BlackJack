@@ -125,7 +125,7 @@ def get_card(id):
             total = cardTotal(id, cardSel.lid)
             db.session.commit()
             if total > 21:
-                total = aceTotalChecker(total)
+                total = aceTotalChecker(total, id)
             cardEntry = CardEntry(cardSel, total, seat)
             valid = True
 
@@ -133,8 +133,8 @@ def get_card(id):
     print("card entry", cardEntry)
     return finalCard
 
-def aceTotalChecker(total):
-    cards = Deck.query.filter_by(pid=current_user.id).all()
+def aceTotalChecker(total, id):
+    cards = Deck.query.filter_by(pid=id).all()
     aceList = []
 
     for card in cards:
@@ -235,7 +235,6 @@ def turnEvent(turn):
         newPlayerNum = nextPlayer.playerNum
         socketio.emit('player turn response', newPlayerNum)
 
-
 @socketio.on('card_event')
 def cardEvent(id):
     dealerCards = Deck.query.filter_by(tid=1, pid=1).all()
@@ -263,6 +262,7 @@ def cardEventRand(id):
         socketio.emit('get card response', card)
 
 def get_card_double(id):
+    #This function is for presentation purposes only
     #sub 16-19
     player = dm.Player.query.filter_by(id=id).first()
     valid = False
@@ -324,10 +324,7 @@ def evalEvent():
     dealerScoreTotal = cardTotal(dealer.pid, None)
     print("Dealer Total:", dealerScoreTotal)
 
-
-
     player = Player.query.filter_by(pid=current_user.id, ptid=1).first()
-    print("CURRENT USER HAND", str(player.hand))
     handResults = []
 
     if player.hand != 0:
@@ -417,32 +414,13 @@ def databaseWipe():
     #Then run deck build afterwards
 
     db.session.query(Deck).delete()
-    db.session.commit()
     db.session.query(Player).delete()
-    db.session.commit()
     db.session.query(Table).delete()
-    db.session.commit()
     db.session.query(User).delete()
     db.session.commit()
 
     return redirect('deck_build')
 
-
-# @login_required
-# @app.route('/remove', methods=['GET', 'POST'])
-# def remove():
-#     player = Player.query.filter_by(id=current_user.id).first()
-#     cards = Deck.query.filter_by(pid=player.pid).all()
-#     table = Table.query.filter_by(tid=1).first()
-#     table.seat += 1
-#     table.tablestate="joinable"
-#     player.playerNum -= 1
-#     for card in cards:
-#         db.session.delete(card)
-#     db.session.delete(player)
-#     db.session.commit()
-#     print("END OF REMOVE ROUTE")
-#     return jsonify({"playerid": player.pid})
 
 
 

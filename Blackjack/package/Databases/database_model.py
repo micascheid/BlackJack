@@ -21,7 +21,6 @@ class User(db.Model, UserMixin):
                + self.email + "\tUsername: " + self.username + "\tPassword: " + self.password + "\tFunds: " \
                + str(self.funds)
 
-
 class Player(db.Model):
     __tablename__ = 'player'
     pid         = db.Column(db.Integer, primary_key=True)
@@ -32,14 +31,13 @@ class Player(db.Model):
     hand        = db.Column(db.Integer, default=0)
     over        = db.Column(db.Boolean, default=False)
     playerNum   = db.Column(db.Integer, default=None)
-    #asd
 
     def dictify(self):
         return {'pid':self.pid, 'amnt':self.amnt, 'bet':self.bet, 'id':self.id, 'ptid':self.ptid}
 
     def __repr__(self):
-        return "pid: " + str(self.pid) + "\tamnt: " + str(self.amnt) + "\tbet: " + str(self.bet) + "\tid: " \
-               + str(self.id) + "\tptid: " + str(self.ptid)
+        return "pid: " + str(self.pid) + "\tamnt: " + self.amnt + "\tbet: " + self.bet + "\tid: " \
+               + self.id + "\tptid: " + self.ptid
 
 class Table(db.Model):
     __tablename__ = 'table'

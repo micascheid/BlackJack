@@ -77,7 +77,7 @@ socket.on('get card response', function(card){
              stayButton.diabled=false;
         }
         if(card.total > 21){
-            playerText.innerHTML = player + ": Bust";
+            playerText.innerText = player + ": Bust";
             hitButton.disabled=true;
             stayButton.disabled=true;
             splitButton.disabled = true;
@@ -87,7 +87,7 @@ socket.on('get card response', function(card){
             }
         }
         if(card.total===21){
-            playerText.innerHTML = player + ": BlackJack";
+            playerText.innerText = player + ": BlackJack";
             hitButton.disabled=true;
             stayButton.disabled=true;
             if(card.seat!==null){
@@ -99,10 +99,10 @@ socket.on('get card response', function(card){
 
     if(card.lid!==null){
         if(card.total < 21){
-             playerText.innerHTML = player + ": " + card.total;
+             playerText.innerText = player + ": " + card.total;
         }
         if(card.total > 21){
-            playerText.innerHTML = player + ": Bust";
+            playerText.innerText = player + ": Bust";
             // playerTurn(playerNum);
             if(card.lid===2){
                hitButton.disabled=true;
@@ -110,7 +110,7 @@ socket.on('get card response', function(card){
             }
         }
         if(card.total===21){
-            playerText.innerHTML = player + ": BlackJack";
+            playerText.innerText = player + ": BlackJack";
             if(card.lid===2){
                 // playerTurn(playerNum);
                stay();
@@ -175,15 +175,15 @@ socket.on('get dealer AI', function (response) {
 
         var playerText = document.getElementById("playernull");
         if (cards[cards.length - 1].total > 21) {
-            playerText.innerHTML = "Dealer: Bust";
+            playerText.innerText = "Dealer: Bust";
         } else if (cards[cards.length - 1].total === 21) {
-            playerText.innerHTML = "Dealer: BlackJack";
+            playerText.innerText = "Dealer: BlackJack";
         } else {
-            playerText.innerHTML = "Dealer: " + cards[cards.length - 1].total;
+            playerText.innerText = "Dealer: " + cards[cards.length - 1].total;
         }
     } else {
         var playerText2 = document.getElementById("playernull");
-        playerText2.innerHTML = "Dealer: " + dealerTotal;
+        playerText2.innerText = "Dealer: " + dealerTotal;
     }
     console.log("gettingCalled");
     evalSocket();

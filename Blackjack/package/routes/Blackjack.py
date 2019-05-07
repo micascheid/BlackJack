@@ -35,11 +35,8 @@ def bust(total, res):
 @app.route('/ready', methods=['GET', 'POST'])
 def ready():
     ready = "False"
-
     player = dm.Player.query.filter_by(id=current_user.id).first()
-    print("CURRENT USER HAND", str(player.hand))
     player.hand = 0
-
     # player.bet = 5
     db.session.commit()
 
@@ -164,6 +161,7 @@ def dealerBlackJackCheck():
     dealerTotal = cardTotal(dealer.pid, None)
 
     if dealerTotal == 21:
+        print("DEALER HIT BLACKJACK")
         return jsonify({"dealer":"over"})
 
     return jsonify({"dealer":"continue"})
