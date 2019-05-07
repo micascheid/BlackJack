@@ -1,11 +1,11 @@
-from package import app, db
+from Blackjack.package import app, db
 from flask_login import login_required
 from flask import render_template, redirect, url_for, jsonify, make_response, json, request
 from flask_login import current_user
-from package.Databases import database_model as dm
-from package.Databases.database_model import User, Deck, Player, Table
-from package.routes.Blackjack import RoundResult, HitResult, bust, reset_cards, add_dealer, cardTran, getCards, getPlayers, PlayerDealerCompare
-from package import socketio
+from Blackjack.package.Databases import database_model as dm
+from Blackjack.package.Databases.database_model import User, Deck, Player, Table
+from Blackjack.package.routes.Blackjack import RoundResult, HitResult, bust, reset_cards, add_dealer, cardTran, getCards, getPlayers, PlayerDealerCompare
+from Blackjack.package import socketio
 import random
 import time
 

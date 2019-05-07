@@ -20,14 +20,14 @@ function deal() {
                     cardSocket(1);
                 }
             }
-            if(totalPlayers===1){
-                console.log("running single player");
-                for (i = 0; i < 2; i++){
-                    var id = players[0].id;
-                    cardSocketRand(id);
-                    cardSocket(1);
-                }
-            }
+            // if(totalPlayers===1){
+            //     console.log("running single player");
+            //     for (i = 0; i < 2; i++){
+            //         var id = players[0].id;
+            //         cardSocketRand(id);
+            //         cardSocket(1);
+            //     }
+            // }
             //Start the playing
             playerTurn(null);
         }
